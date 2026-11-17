@@ -1,0 +1,34 @@
+# Whitelist: only the code, docs, result tables and figures are tracked.
+/*
+!/.gitignore
+!/README.md
+!/requirements.txt
+!/lab/
+!/viewer/
+!/docs/
+!/presentation/
+!/qcd_spec/
+
+__pycache__/
+*.pyc
+*.log
+*.pt
+*.ckpt
+*.npz
+*.npy
+*.parquet
+
+# not ours to publish / not needed
+qcd_spec/results/logs/
+qcd_spec/results/*/logs/
+qcd_spec/results/live/
+qcd_spec/results/_superseded_v1/
+qcd_spec/results/running/
+qcd_spec/results/*/running/
+qcd_spec/jobs_*.txt
+qcd_spec/keep_awake.ps1
+presentation/*.aux
+presentation/*.out
+presentation/*.toc
+presentation/*.nav
+presentation/*.snm
