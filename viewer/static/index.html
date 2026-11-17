@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cruise Lab Viewer</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/plotly.js-dist-min@2.35.2/plotly.min.js"></script>
+</head>
+<body>
+<header>
+  <div class="brand">Cruise Lab <span>B747 cruise · JSBSim · observation vs control anomalies</span></div>
+  <div class="controls">
+    <label>Show
+      <select id="kindFilter">
+        <option value="all">all flights</option>
+        <option value="normal">normal</option>
+        <option value="observation">observation anomalies</option>
+        <option value="control">control anomalies</option>
+      </select>
+    </label>
+    <label>Flight <select id="flightSel"></select></label>
+    <label class="chk"><input type="checkbox" id="twinChk" checked> overlay normal twin</label>
+    <label class="chk"><input type="checkbox" id="constChk"> list constant channels too</label>
+    <a href="docs.html" target="_blank">Docs ↗</a>
+  </div>
+</header>
+
+<main>
+  <section class="cards">
+    <div class="card" id="anomCard"></div>
+    <div class="card" id="scenCard"></div>
+    <div class="card" id="effCard">
+      <div class="cardhead">Most affected channels
+        <label class="chk small"><input type="checkbox" id="ctxChk"> include environment / bookkeeping</label>
+      </div>
+      <div id="effList"></div>
+    </div>
+  </section>
+
+  <section class="grid" id="grid"></section>
+</main>
+
+<template id="panelTpl">
+  <div class="panel">
+    <div class="ptop">
+      <span class="pnum"></span>
+      <input class="search" type="search" placeholder="filter channels (e.g. n1, elevator, alt)…">
+      <select class="chan"></select>
+    </div>
+    <div class="popts">
+      <label class="chk small optTruth"><input type="checkbox" class="truthChk" checked> true value</label>
+      <label class="chk small optEng"><input type="checkbox" class="engChk"> other engines</label>
+    </div>
+    <div class="role"></div>
+    <div class="plot"></div>
+    <div class="meaning"></div>
+  </div>
+</template>
+
+<script src="app.js"></script>
+</body>
+</html>
