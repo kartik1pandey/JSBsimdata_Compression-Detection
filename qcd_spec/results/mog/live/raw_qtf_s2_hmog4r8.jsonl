@@ -1,0 +1,1 @@
+{"stage": "args", "pipeline": "raw", "enc": "tf", "q": "tf", "k": 8, "lam": 0.0, "seed": 2, "lr": 0.001, "e0": 10, "e1": 30, "e2": 15, "e3": 5, "dec": "conv", "head": "mog", "mix": 4, "rank": 8, "enc_out": "ln", "d": 64, "tag": "raw_qtf_s2_hmog4r8"}

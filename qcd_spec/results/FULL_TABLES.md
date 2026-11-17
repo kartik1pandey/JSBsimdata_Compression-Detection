@@ -219,28 +219,37 @@ q(z_{t+1} | z_{<=t}) = sum_m pi_m N(mu_m, W_m W_m^T + diag d_m), 4 components, r
 | Transformer, diagonal Gaussian q, LayerNorm output (main grid) | 0 | 12 ± 4 | 58 ± 1 | 4.5 ± 0.3 | 3/3 | 0.154 ± 0.006 | -0.34 ± 0.21 |
 | Transformer, diagonal Gaussian q, LayerNorm output (main grid) | 0.1 | 14 ± 3 | 37 ± 10 | 5.2 ± 1.3 | 3/3 | 0.165 ± 0.007 | -0.37 ± 0.16 |
 | Transformer, diagonal Gaussian q, LayerNorm output (main grid) | 0.25 | 20 ± 3 | 28 ± 8 | 4.3 ± 1.2 | 1/3 | 0.189 ± 0.004 | 0.07 ± 0.30 |
-| Transformer, MoG q (4 comp.), linear output  [supervisor spec] | 0 | 29 ± 8 | 50 ± 0 | 4.3 ± 1.4 | 2/2 | 0.142 ± 0.003 | -0.07 ± 0.01 |
-| Transformer, MoG q (4 comp.), linear output  [supervisor spec] | 0.1 | 55 ± 5 | 32 ± 2 | 5.4 ± 1.8 | 2/2 | 0.128 ± 0.001 | -0.17 ± 0.11 |
-| Transformer, MoG q (4 comp.), linear output  [supervisor spec] | 0.25 | 19 | 59 | 2.9 | 1/1 | 0.193 | -0.01 |
+| Transformer, MoG q (4 comp.), linear output  [supervisor spec] | 0 | 32 ± 7 | 53 ± 4 | 5.2 ± 1.8 | 3/3 | 0.141 ± 0.003 | -0.08 ± 0.02 |
+| Transformer, MoG q (4 comp.), linear output  [supervisor spec] | 0.1 | 50 ± 8 | 34 ± 3 | 4.0 ± 2.4 | 3/3 | 0.130 ± 0.002 | -0.12 ± 0.12 |
+| Transformer, MoG q (4 comp.), linear output  [supervisor spec] | 0.25 | 31 ± 12 | 48 ± 11 | 2.1 ± 0.7 | 2/2 | 0.184 ± 0.010 | -0.04 ± 0.02 |
+| Transformer, MoG q (4 comp.), LayerNorm output  [ablation] | 0.25 | 16 | 62 | 5.0 | 1/1 | 0.215 | -0.16 |
 
 ### 9b. Code size k with the MoG head (linear output)
 
 | λ | k | detected % | median delay s | false alarm % | valid | D̄ | E0[s] |
 |---|---|---|---|---|---|---|---|
-| 0 | 8 | 29 ± 8 | 50 ± 0 | 4.3 ± 1.4 | 2/2 | 0.142 ± 0.003 | -0.07 ± 0.01 |
+| 0 | 2 | 9 | 84 | 5.0 | 1/1 | 0.235 | -0.02 |
+| 0 | 4 | 25 | 78 | 8.6 | 1/1 | 0.186 | -0.07 |
+| 0 | 8 | 32 ± 7 | 53 ± 4 | 5.2 ± 1.8 | 3/3 | 0.141 ± 0.003 | -0.08 ± 0.02 |
 | 0 | 16 | 36 | 44 | 3.6 | 1/1 | 0.092 | -1.06 |
 | 0 | 32 | 32 | 67 | 5.0 | 1/1 | 0.078 | -2.19 |
 | 0 | 64 | 31 | 50 | 2.9 | 1/1 | 0.075 | -3.19 |
 | 0 | 128 | 45 | 47 | 5.7 | 1/1 | 0.040 | -0.85 |
-| 0.25 | 8 | 19 | 59 | 2.9 | 1/1 | 0.193 | -0.01 |
+| 0.25 | 2 | 8 | 112 | 5.0 | 0/1 | 0.294 | 0.07 |
+| 0.25 | 4 | 7 | 80 | 3.6 | 0/1 | 0.299 | 0.14 |
+| 0.25 | 8 | 31 ± 12 | 48 ± 11 | 2.1 ± 0.7 | 2/2 | 0.184 ± 0.010 | -0.04 ± 0.02 |
+| 0.25 | 16 | 45 | 31 | 5.0 | 1/1 | 0.091 | -0.30 |
 | 0.25 | 64 | 41 | 52 | 5.0 | 1/1 | 0.079 | -2.66 |
 
 ### 9c. Architecture, size and training settings of the MoG runs
 
 | run | params encoder f | params decoder g | params q0 (= q1) | train time min | GPU peak MB |
 |---|---|---|---|---|---|
+| k = 2, linear output | 86146 | 121769 | 72596 | 54 | 1019 |
+| k = 4, linear output | 86276 | 123049 | 77924 | 51 | 1019 |
 | k = 8, linear output | 86536 | 125609 | 88580 | 69 | 1020 |
-| k = 16, linear output | 87056 | 130729 | 109892 | 55 | 1022 |
+| k = 8, ln output | 86552 | 125609 | 88580 | 57 | 1020 |
+| k = 16, linear output | 87056 | 130729 | 109892 | 58 | 1022 |
 | k = 32, linear output | 88096 | 140969 | 152516 | 62 | 1025 |
 | k = 64, linear output | 90176 | 161449 | 237764 | 81 | 1878 |
 | k = 128, linear output | 94336 | 202409 | 408260 | 106 | 2494 |
