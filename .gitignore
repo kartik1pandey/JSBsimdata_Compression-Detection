@@ -22,6 +22,7 @@ __pycache__/
 qcd_spec/results/logs/
 qcd_spec/results/*/logs/
 qcd_spec/results/live/
+qcd_spec/results/*/live/
 qcd_spec/results/_superseded_v1/
 qcd_spec/results/running/
 qcd_spec/results/*/running/
