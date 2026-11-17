@@ -1,0 +1,1 @@
+{"stage": "args", "pipeline": "cae", "enc": "tcn", "q": "tcn", "k": 16, "lam": 0.0, "seed": 0, "lr": 0.001, "e0": 10, "e1": 10, "e2": 15, "e3": 10, "dec": "conv", "tag": "cae_etcn_qtcn_k16_lam0_s0"}

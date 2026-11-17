@@ -1,0 +1,236 @@
+{
+ "tag": "cae_etcn_qtcn_k8_lam0_s0",
+ "bits": 6,
+ "receiver": "refit",
+ "k": 8,
+ "rate_bit_s": 192,
+ "raw_rate_bit_s": 38016,
+ "args": {
+  "dec": "conv",
+  "pipeline": "cae",
+  "enc": "tcn",
+  "q": "tcn",
+  "k": 8,
+  "lam": 0.0,
+  "seed": 0,
+  "lr": 0.001,
+  "e0": 10,
+  "e1": 10,
+  "e2": 15,
+  "e3": 10
+ },
+ "log": [
+  {
+   "stage": "refit",
+   "epoch": 0,
+   "L0": -1.585310046161924,
+   "L1": -1.465883148568017,
+   "E0s": -0.1352643519639969,
+   "margin0": -0.07754414528608322,
+   "L0val": -2.869234085083008,
+   "E1s": 0.3736669719219208,
+   "floor_frac": 0.0
+  },
+  {
+   "stage": "refit",
+   "epoch": 1,
+   "L0": -2.968140833718436,
+   "L1": -2.877788421085903,
+   "E0s": -0.2952832281589508,
+   "margin0": -0.26723238825798035,
+   "L0val": -2.9481804370880127,
+   "E1s": 0.3504360616207123,
+   "floor_frac": 0.0
+  },
+  {
+   "stage": "refit",
+   "epoch": 2,
+   "L0": -3.011030146053859,
+   "L1": -2.9492944036211286,
+   "E0s": -0.11642993986606598,
+   "margin0": -0.12856978178024292,
+   "L0val": -2.9497263431549072,
+   "E1s": 0.6317808628082275,
+   "floor_frac": 0.0
+  },
+  {
+   "stage": "refit",
+   "epoch": 3,
+   "L0": -3.037939214706421,
+   "L1": -2.952364798954555,
+   "E0s": -0.12022318691015244,
+   "margin0": -0.1369110494852066,
+   "L0val": -2.9691622257232666,
+   "E1s": 0.8019774556159973,
+   "floor_frac": 0.0
+  },
+  {
+   "stage": "refit",
+   "epoch": 4,
+   "L0": -3.0541735989706855,
+   "L1": -2.975103054727827,
+   "E0s": -0.11348486691713333,
+   "margin0": -0.13520514965057373,
+   "L0val": -2.9716713428497314,
+   "E1s": 0.8278746604919434,
+   "floor_frac": 0.0
+  }
+ ],
+ "secs": 21.1,
+ "val": {
+  "CE00": -27.566707611083984,
+  "CE01": -27.33883285522461,
+  "CE10": -25.934343338012695,
+  "CE11": -26.853778839111328,
+  "K": 0.9194355010986328,
+  "signs_ok": true,
+  "E0s": -0.22787633538246155,
+  "E1s": 0.9194348454475403,
+  "margin0": -0.6132960915565491,
+  "J_eff": 0.01337751280516386
+ },
+ "test": {
+  "CE00": -27.60968780517578,
+  "CE01": -27.386959075927734,
+  "CE10": -26.045637130737305,
+  "CE11": -26.806564331054688,
+  "K": 0.7609272003173828,
+  "signs_ok": true,
+  "E0s": -0.2227298617362976,
+  "E1s": 0.7609204649925232,
+  "margin0": -0.6324549913406372,
+  "J_eff": 0.02021549828350544
+ },
+ "D_test_normal": 0.15794703364372253,
+ "D_test_abnormal": 0.4965173900127411,
+ "h": 39.83538818359375,
+ "calibration": {
+  "N": 140,
+  "r": 134,
+  "valid": true,
+  "plain_quantile": 37.37521743774414
+ },
+ "FA_test_normal": 0.04285714285714286,
+ "detect": {
+  "DR": 0.1357142857142857,
+  "FA_pre": 0.03571428571428571,
+  "miss": 0.8285714285714286,
+  "ADD_mean_s": 67.19736842105263,
+  "ADD_median_s": 43.0,
+  "n": 140
+ },
+ "detect_per_type": {
+  "pitot_blockage": {
+   "DR": 0.4,
+   "FA_pre": 0.1,
+   "miss": 0.5,
+   "ADD_mean_s": 156.5625,
+   "ADD_median_s": 152.75,
+   "n": 10
+  },
+  "sensor_bias": {
+   "DR": 0.2,
+   "FA_pre": 0.1,
+   "miss": 0.7,
+   "ADD_mean_s": 5.125,
+   "ADD_median_s": 5.125,
+   "n": 10
+  },
+  "sensor_drift": {
+   "DR": 0.1,
+   "FA_pre": 0.0,
+   "miss": 0.9,
+   "ADD_mean_s": 38.25,
+   "ADD_median_s": 38.25,
+   "n": 10
+  },
+  "sensor_noise": {
+   "DR": 0.0,
+   "FA_pre": 0.0,
+   "miss": 1.0,
+   "ADD_mean_s": null,
+   "ADD_median_s": null,
+   "n": 10
+  },
+  "sensor_spikes": {
+   "DR": 0.0,
+   "FA_pre": 0.0,
+   "miss": 1.0,
+   "ADD_mean_s": null,
+   "ADD_median_s": null,
+   "n": 10
+  },
+  "sensor_stuck": {
+   "DR": 0.5,
+   "FA_pre": 0.0,
+   "miss": 0.5,
+   "ADD_mean_s": 46.45,
+   "ADD_median_s": 45.75,
+   "n": 10
+  },
+  "surface_bias": {
+   "DR": 0.1,
+   "FA_pre": 0.0,
+   "miss": 0.9,
+   "ADD_mean_s": 4.75,
+   "ADD_median_s": 4.75,
+   "n": 10
+  },
+  "surface_loss_of_effectiveness": {
+   "DR": 0.1,
+   "FA_pre": 0.0,
+   "miss": 0.9,
+   "ADD_mean_s": 75.5,
+   "ADD_median_s": 75.5,
+   "n": 10
+  },
+  "surface_oscillation": {
+   "DR": 0.0,
+   "FA_pre": 0.0,
+   "miss": 1.0,
+   "ADD_mean_s": null,
+   "ADD_median_s": null,
+   "n": 10
+  },
+  "surface_runaway": {
+   "DR": 0.0,
+   "FA_pre": 0.1,
+   "miss": 0.9,
+   "ADD_mean_s": null,
+   "ADD_median_s": null,
+   "n": 10
+  },
+  "surface_stuck": {
+   "DR": 0.1,
+   "FA_pre": 0.0,
+   "miss": 0.9,
+   "ADD_mean_s": 37.0,
+   "ADD_median_s": 37.0,
+   "n": 10
+  },
+  "throttle_lever_bias": {
+   "DR": 0.0,
+   "FA_pre": 0.0,
+   "miss": 1.0,
+   "ADD_mean_s": null,
+   "ADD_median_s": null,
+   "n": 10
+  },
+  "throttle_lever_stuck": {
+   "DR": 0.1,
+   "FA_pre": 0.1,
+   "miss": 0.8,
+   "ADD_mean_s": 199.0,
+   "ADD_median_s": 199.0,
+   "n": 10
+  },
+  "throttle_thrust_loss": {
+   "DR": 0.3,
+   "FA_pre": 0.1,
+   "miss": 0.6,
+   "ADD_mean_s": 17.833333333333332,
+   "ADD_median_s": 16.5,
+   "n": 10
+  }
+ }
+}

@@ -1,0 +1,181 @@
+{
+ "tag": "cae_egru_qgru_k8_lam0.25_s1",
+ "bits": 8,
+ "receiver": "frozen",
+ "k": 8,
+ "rate_bit_s": 256,
+ "raw_rate_bit_s": 38016,
+ "args": {
+  "dec": "conv",
+  "pipeline": "cae",
+  "enc": "gru",
+  "q": "gru",
+  "k": 8,
+  "lam": 0.25,
+  "seed": 1,
+  "lr": 0.001,
+  "e0": 10,
+  "e1": 10,
+  "e2": 15,
+  "e3": 10,
+  "tag": "cae_egru_qgru_k8_lam0.25_s1"
+ },
+ "log": [],
+ "secs": 4.0,
+ "val": {
+  "CE00": -34.96128845214844,
+  "CE01": -34.10088348388672,
+  "CE10": 997.2341918945312,
+  "CE11": -29.64253044128418,
+  "K": 1026.8767223358154,
+  "signs_ok": true,
+  "E0s": -0.8604079484939575,
+  "E1s": 1026.8765869140625,
+  "margin0": -0.04326914995908737,
+  "J_eff": 0.004406800959259272
+ },
+ "test": {
+  "CE00": -34.11598205566406,
+  "CE01": -34.14885330200195,
+  "CE10": 808.6622924804688,
+  "CE11": -28.66994285583496,
+  "K": 837.3322353363037,
+  "signs_ok": false,
+  "E0s": 0.03287573531270027,
+  "E1s": 837.3321533203125,
+  "margin0": 0.00029148795874789357,
+  "J_eff": 0.0027523385360836983
+ },
+ "D_test_normal": 0.17761355638504028,
+ "D_test_abnormal": 0.6310825943946838,
+ "h": 2595.014404296875,
+ "calibration": {
+  "N": 140,
+  "r": 134,
+  "valid": true,
+  "plain_quantile": 2587.265625
+ },
+ "FA_test_normal": 0.07857142857142857,
+ "detect": {
+  "DR": 0.2357142857142857,
+  "FA_pre": 0.02857142857142857,
+  "miss": 0.7357142857142858,
+  "ADD_mean_s": 44.84090909090909,
+  "ADD_median_s": 19.75,
+  "n": 140
+ },
+ "detect_per_type": {
+  "pitot_blockage": {
+   "DR": 0.2,
+   "FA_pre": 0.0,
+   "miss": 0.8,
+   "ADD_mean_s": 158.125,
+   "ADD_median_s": 158.125,
+   "n": 10
+  },
+  "sensor_bias": {
+   "DR": 0.5,
+   "FA_pre": 0.2,
+   "miss": 0.3,
+   "ADD_mean_s": 0.0,
+   "ADD_median_s": 0.0,
+   "n": 10
+  },
+  "sensor_drift": {
+   "DR": 0.1,
+   "FA_pre": 0.0,
+   "miss": 0.9,
+   "ADD_mean_s": 59.75,
+   "ADD_median_s": 59.75,
+   "n": 10
+  },
+  "sensor_noise": {
+   "DR": 0.3,
+   "FA_pre": 0.0,
+   "miss": 0.7,
+   "ADD_mean_s": 23.666666666666668,
+   "ADD_median_s": 23.75,
+   "n": 10
+  },
+  "sensor_spikes": {
+   "DR": 0.3,
+   "FA_pre": 0.0,
+   "miss": 0.7,
+   "ADD_mean_s": 29.833333333333332,
+   "ADD_median_s": 35.25,
+   "n": 10
+  },
+  "sensor_stuck": {
+   "DR": 0.5,
+   "FA_pre": 0.1,
+   "miss": 0.4,
+   "ADD_mean_s": 48.1,
+   "ADD_median_s": 45.75,
+   "n": 10
+  },
+  "surface_bias": {
+   "DR": 0.2,
+   "FA_pre": 0.0,
+   "miss": 0.8,
+   "ADD_mean_s": 0.0,
+   "ADD_median_s": 0.0,
+   "n": 10
+  },
+  "surface_loss_of_effectiveness": {
+   "DR": 0.0,
+   "FA_pre": 0.0,
+   "miss": 1.0,
+   "ADD_mean_s": null,
+   "ADD_median_s": null,
+   "n": 10
+  },
+  "surface_oscillation": {
+   "DR": 0.7,
+   "FA_pre": 0.0,
+   "miss": 0.3,
+   "ADD_mean_s": 28.75,
+   "ADD_median_s": 1.25,
+   "n": 10
+  },
+  "surface_runaway": {
+   "DR": 0.0,
+   "FA_pre": 0.0,
+   "miss": 1.0,
+   "ADD_mean_s": null,
+   "ADD_median_s": null,
+   "n": 10
+  },
+  "surface_stuck": {
+   "DR": 0.3,
+   "FA_pre": 0.0,
+   "miss": 0.7,
+   "ADD_mean_s": 98.16666666666667,
+   "ADD_median_s": 94.75,
+   "n": 10
+  },
+  "throttle_lever_bias": {
+   "DR": 0.0,
+   "FA_pre": 0.0,
+   "miss": 1.0,
+   "ADD_mean_s": null,
+   "ADD_median_s": null,
+   "n": 10
+  },
+  "throttle_lever_stuck": {
+   "DR": 0.1,
+   "FA_pre": 0.1,
+   "miss": 0.8,
+   "ADD_mean_s": 7.75,
+   "ADD_median_s": 7.75,
+   "n": 10
+  },
+  "throttle_thrust_loss": {
+   "DR": 0.1,
+   "FA_pre": 0.0,
+   "miss": 0.9,
+   "ADD_mean_s": 199.25,
+   "ADD_median_s": 199.25,
+   "n": 10
+  }
+ }
+}
