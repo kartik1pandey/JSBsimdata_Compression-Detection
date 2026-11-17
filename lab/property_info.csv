@@ -1,0 +1,700 @@
+property,namespace,varies_in_flight,status,dataset_column,meaning
+inertial/sea-level-radius_ft,inertial,True,reference-frame / navigation geometry,,Earth model constants
+simulation/gravity-model,simulation,False,constant in flight,,simulation time / frame counter
+simulation/integrator/rate/rotational,simulation,False,constant in flight,,simulation time / frame counter
+simulation/integrator/rate/translational,simulation,False,constant in flight,,simulation time / frame counter
+simulation/integrator/position/rotational,simulation,False,constant in flight,,simulation time / frame counter
+simulation/integrator/position/translational,simulation,False,constant in flight,,simulation time / frame counter
+simulation/channel-dt,simulation,False,constant in flight,,simulation time / frame counter
+simulation/gravitational-torque,simulation,False,constant in flight,,simulation time / frame counter
+simulation/disperse,simulation,False,constant in flight,,simulation time / frame counter
+simulation/randomseed,simulation,False,constant in flight,,simulation time / frame counter
+simulation/terminate,simulation,False,constant in flight,,simulation time / frame counter
+simulation/pause,simulation,False,constant in flight,,simulation time / frame counter
+simulation/sim-time-sec,simulation,True,simulator bookkeeping,,simulation time / frame counter
+simulation/dt,simulation,False,constant in flight,,simulation time / frame counter
+simulation/jsbsim-debug,simulation,False,constant in flight,,simulation time / frame counter
+simulation/frame,simulation,True,simulator bookkeeping,,simulation time / frame counter
+simulation/trim-completed,simulation,False,constant in flight,,simulation time / frame counter
+velocities/h-dot-fps,velocities,True,RECORDED,VS (x60 -> ft/min),vertical speed (ft/s)
+velocities/v-north-fps,velocities,True,"CANDIDATE: real FDR parameter, could be added",,velocity north / east / down relative to the ground (ft/s)
+velocities/v-east-fps,velocities,True,"CANDIDATE: real FDR parameter, could be added",,velocity north / east / down relative to the ground (ft/s)
+velocities/v-down-fps,velocities,True,"CANDIDATE: real FDR parameter, could be added",,velocity north / east / down relative to the ground (ft/s)
+velocities/u-fps,velocities,True,internal model quantity,,body-axis velocity components (ft/s)
+velocities/v-fps,velocities,True,internal model quantity,,body-axis velocity components (ft/s)
+velocities/w-fps,velocities,True,internal model quantity,,body-axis velocity components (ft/s)
+velocities/p-rad_sec,velocities,True,"used by autopilot, not recorded",,"roll rate -- read by the autopilot, not recorded"
+velocities/q-rad_sec,velocities,True,"used by autopilot, not recorded",,"pitch rate -- read by the autopilot, not recorded"
+velocities/r-rad_sec,velocities,True,"CANDIDATE: real FDR parameter, could be added",,body roll / pitch / yaw rate (rad/s)
+velocities/pi-rad_sec,velocities,True,reference-frame / navigation geometry,,velocity / rates in Earth-centred or inertial frames
+velocities/qi-rad_sec,velocities,True,reference-frame / navigation geometry,,velocity / rates in Earth-centred or inertial frames
+velocities/ri-rad_sec,velocities,True,reference-frame / navigation geometry,,velocity / rates in Earth-centred or inertial frames
+velocities/eci-x-fps,velocities,True,reference-frame / navigation geometry,,velocity / rates in Earth-centred or inertial frames
+velocities/eci-y-fps,velocities,True,reference-frame / navigation geometry,,velocity / rates in Earth-centred or inertial frames
+velocities/eci-z-fps,velocities,True,reference-frame / navigation geometry,,velocity / rates in Earth-centred or inertial frames
+velocities/ecef-x-fps,velocities,True,reference-frame / navigation geometry,,velocity / rates in Earth-centred or inertial frames
+velocities/ecef-y-fps,velocities,True,reference-frame / navigation geometry,,velocity / rates in Earth-centred or inertial frames
+velocities/ecef-z-fps,velocities,True,reference-frame / navigation geometry,,velocity / rates in Earth-centred or inertial frames
+velocities/eci-velocity-mag-fps,velocities,True,reference-frame / navigation geometry,,velocity / rates in Earth-centred or inertial frames
+velocities/ned-velocity-mag-fps,velocities,True,"duplicate (same quantity, other unit/form)",,airspeed / ground speed in other units
+velocities/vc-fps,velocities,True,"duplicate (same quantity, other unit/form)",,airspeed / ground speed in other units
+velocities/vc-kts,velocities,True,RECORDED,CAS,calibrated airspeed (kt)
+velocities/ve-fps,velocities,True,"duplicate (same quantity, other unit/form)",,airspeed / ground speed in other units
+velocities/ve-kts,velocities,True,"CANDIDATE: real FDR parameter, could be added",,equivalent airspeed (kt)
+velocities/vtrue-fps,velocities,True,"duplicate (same quantity, other unit/form)",,airspeed / ground speed in other units
+velocities/vtrue-kts,velocities,True,"CANDIDATE: real FDR parameter, could be added",,true airspeed (kt)
+velocities/machU,velocities,True,"duplicate (same quantity, other unit/form)",,airspeed / ground speed in other units
+velocities/p-aero-rad_sec,velocities,True,"duplicate (same quantity, other unit/form)",,body rates relative to the air mass
+velocities/q-aero-rad_sec,velocities,True,"duplicate (same quantity, other unit/form)",,body rates relative to the air mass
+velocities/r-aero-rad_sec,velocities,True,"duplicate (same quantity, other unit/form)",,body rates relative to the air mass
+velocities/phidot-rad_sec,velocities,True,"duplicate (same quantity, other unit/form)",,Euler-angle rates (rad/s)
+velocities/thetadot-rad_sec,velocities,True,"duplicate (same quantity, other unit/form)",,Euler-angle rates (rad/s)
+velocities/psidot-rad_sec,velocities,True,"duplicate (same quantity, other unit/form)",,Euler-angle rates (rad/s)
+velocities/u-aero-fps,velocities,True,internal model quantity,,body-axis velocity components (ft/s)
+velocities/v-aero-fps,velocities,True,internal model quantity,,body-axis velocity components (ft/s)
+velocities/w-aero-fps,velocities,True,internal model quantity,,body-axis velocity components (ft/s)
+velocities/vt-fps,velocities,True,"duplicate (same quantity, other unit/form)",,airspeed / ground speed in other units
+velocities/mach,velocities,True,RECORDED,MACH,Mach number
+velocities/vg-fps,velocities,True,"CANDIDATE: real FDR parameter, could be added",,ground speed (ft/s)
+position/h-sl-ft,position,True,RECORDED,ALT,altitude above sea level (ft)
+position/h-sl-meters,position,True,reference-frame / navigation geometry,,position in Earth-centred frames / other units
+position/lat-gc-rad,position,True,reference-frame / navigation geometry,,position in Earth-centred frames / other units
+position/long-gc-rad,position,True,reference-frame / navigation geometry,,position in Earth-centred frames / other units
+position/lat-gc-deg,position,True,reference-frame / navigation geometry,,position in Earth-centred frames / other units
+position/long-gc-deg,position,True,"CANDIDATE: real FDR parameter, could be added",,latitude / longitude (deg) -- FDRs record position
+position/lat-geod-rad,position,True,reference-frame / navigation geometry,,position in Earth-centred frames / other units
+position/lat-geod-deg,position,True,"CANDIDATE: real FDR parameter, could be added",,latitude / longitude (deg) -- FDRs record position
+position/geod-alt-ft,position,True,reference-frame / navigation geometry,,position in Earth-centred frames / other units
+position/h-agl-ft,position,True,"CANDIDATE: real FDR parameter, could be added",,height above ground (ft) -- radio altitude below 2500 ft on a real aircraft
+position/geod-alt-km,position,True,reference-frame / navigation geometry,,position in Earth-centred frames / other units
+position/h-agl-km,position,True,reference-frame / navigation geometry,,position in Earth-centred frames / other units
+position/radius-to-vehicle-ft,position,True,reference-frame / navigation geometry,,position in Earth-centred frames / other units
+position/terrain-elevation-asl-ft,position,True,reference-frame / navigation geometry,,position in Earth-centred frames / other units
+position/eci-x-ft,position,True,reference-frame / navigation geometry,,position in Earth-centred frames / other units
+position/eci-y-ft,position,True,reference-frame / navigation geometry,,position in Earth-centred frames / other units
+position/eci-z-ft,position,True,reference-frame / navigation geometry,,position in Earth-centred frames / other units
+position/ecef-x-ft,position,True,reference-frame / navigation geometry,,position in Earth-centred frames / other units
+position/ecef-y-ft,position,True,reference-frame / navigation geometry,,position in Earth-centred frames / other units
+position/ecef-z-ft,position,True,reference-frame / navigation geometry,,position in Earth-centred frames / other units
+position/epa-rad,position,True,reference-frame / navigation geometry,,position in Earth-centred frames / other units
+position/distance-from-start-lon-mt,position,True,reference-frame / navigation geometry,,distance travelled from the start point
+position/distance-from-start-lat-mt,position,True,reference-frame / navigation geometry,,distance travelled from the start point
+position/distance-from-start-mag-mt,position,True,reference-frame / navigation geometry,,distance travelled from the start point
+position/vrp-gc-latitude_deg,position,True,reference-frame / navigation geometry,,position in Earth-centred frames / other units
+position/vrp-longitude_deg,position,True,reference-frame / navigation geometry,,position in Earth-centred frames / other units
+position/vrp-radius-ft,position,True,reference-frame / navigation geometry,,position in Earth-centred frames / other units
+position/from-start-neu-n-ft,position,True,reference-frame / navigation geometry,,distance travelled from the start point
+position/from-start-neu-e-ft,position,True,reference-frame / navigation geometry,,distance travelled from the start point
+position/from-start-neu-u-ft,position,True,reference-frame / navigation geometry,,distance travelled from the start point
+metrics/terrain-radius,metrics,True,reference-frame / navigation geometry,,Earth model constants
+metrics/Sw-sqft,metrics,False,constant in flight,,
+metrics/bw-ft,metrics,False,constant in flight,,
+metrics/cbarw-ft,metrics,False,constant in flight,,
+metrics/iw-rad,metrics,False,constant in flight,,
+metrics/iw-deg,metrics,False,constant in flight,,
+metrics/Sh-sqft,metrics,False,constant in flight,,
+metrics/lh-ft,metrics,False,constant in flight,,
+metrics/Sv-sqft,metrics,False,constant in flight,,
+metrics/lv-ft,metrics,False,constant in flight,,
+metrics/lh-norm,metrics,False,constant in flight,,
+metrics/lv-norm,metrics,False,constant in flight,,
+metrics/vbarh-norm,metrics,False,constant in flight,,
+metrics/vbarv-norm,metrics,False,constant in flight,,
+metrics/aero-rp-x-in,metrics,False,constant in flight,,
+metrics/aero-rp-y-in,metrics,False,constant in flight,,
+metrics/aero-rp-z-in,metrics,False,constant in flight,,
+metrics/eyepoint-x-in,metrics,False,constant in flight,,
+metrics/eyepoint-y-in,metrics,False,constant in flight,,
+metrics/eyepoint-z-in,metrics,False,constant in flight,,
+metrics/visualrefpoint-x-in,metrics,False,constant in flight,,
+metrics/visualrefpoint-y-in,metrics,False,constant in flight,,
+metrics/visualrefpoint-z-in,metrics,False,constant in flight,,
+attitude/phi-rad,attitude,True,"duplicate (same quantity, other unit/form)",,pitch / roll / heading in radians (duplicate)
+attitude/theta-rad,attitude,True,"duplicate (same quantity, other unit/form)",,pitch / roll / heading in radians (duplicate)
+attitude/psi-rad,attitude,True,"duplicate (same quantity, other unit/form)",,pitch / roll / heading in radians (duplicate)
+attitude/phi-deg,attitude,True,RECORDED,ROLL,pitch / roll / heading (deg)
+attitude/theta-deg,attitude,True,RECORDED,PITCH,pitch / roll / heading (deg)
+attitude/psi-deg,attitude,True,RECORDED,HDG,pitch / roll / heading (deg)
+attitude/roll-rad,attitude,True,"duplicate (same quantity, other unit/form)",,pitch / roll / heading in radians (duplicate)
+attitude/pitch-rad,attitude,True,"duplicate (same quantity, other unit/form)",,pitch / roll / heading in radians (duplicate)
+attitude/heading-true-rad,attitude,True,"duplicate (same quantity, other unit/form)",,pitch / roll / heading in radians (duplicate)
+orbital/specific-angular-momentum-ft2_sec,orbital,True,reference-frame / navigation geometry,,orbital elements of the trajectory (space use; meaningless for an airliner)
+orbital/inclination-deg,orbital,True,reference-frame / navigation geometry,,orbital elements of the trajectory (space use; meaningless for an airliner)
+orbital/right-ascension-deg,orbital,True,reference-frame / navigation geometry,,orbital elements of the trajectory (space use; meaningless for an airliner)
+orbital/eccentricity,orbital,True,reference-frame / navigation geometry,,orbital elements of the trajectory (space use; meaningless for an airliner)
+orbital/argument-of-perigee-deg,orbital,True,reference-frame / navigation geometry,,orbital elements of the trajectory (space use; meaningless for an airliner)
+orbital/true-anomaly-deg,orbital,True,reference-frame / navigation geometry,,orbital elements of the trajectory (space use; meaningless for an airliner)
+orbital/apoapsis-radius-ft,orbital,True,reference-frame / navigation geometry,,orbital elements of the trajectory (space use; meaningless for an airliner)
+orbital/periapsis-radius-ft,orbital,True,reference-frame / navigation geometry,,orbital elements of the trajectory (space use; meaningless for an airliner)
+orbital/period-sec,orbital,True,reference-frame / navigation geometry,,orbital elements of the trajectory (space use; meaningless for an airliner)
+atmosphere/T-R,atmosphere,True,"CANDIDATE: real FDR parameter, could be added",,static air temperature (Rankine) -- SAT/OAT
+atmosphere/rho-slugs_ft3,atmosphere,True,"duplicate (same quantity, other unit/form)",,"derived air property (speed of sound, density, ratios to sea level, vapour pressure)"
+atmosphere/P-psf,atmosphere,True,"CANDIDATE: real FDR parameter, could be added",,static pressure (lb/ft^2)
+atmosphere/a-fps,atmosphere,True,"duplicate (same quantity, other unit/form)",,"derived air property (speed of sound, density, ratios to sea level, vapour pressure)"
+atmosphere/T-sl-R,atmosphere,False,constant in flight,,"derived air property (speed of sound, density, ratios to sea level, vapour pressure)"
+atmosphere/rho-sl-slugs_ft3,atmosphere,False,constant in flight,,"derived air property (speed of sound, density, ratios to sea level, vapour pressure)"
+atmosphere/a-sl-fps,atmosphere,False,constant in flight,,"derived air property (speed of sound, density, ratios to sea level, vapour pressure)"
+atmosphere/theta,atmosphere,True,"duplicate (same quantity, other unit/form)",,"derived air property (speed of sound, density, ratios to sea level, vapour pressure)"
+atmosphere/sigma,atmosphere,True,"duplicate (same quantity, other unit/form)",,"derived air property (speed of sound, density, ratios to sea level, vapour pressure)"
+atmosphere/delta,atmosphere,True,"duplicate (same quantity, other unit/form)",,"derived air property (speed of sound, density, ratios to sea level, vapour pressure)"
+atmosphere/a-ratio,atmosphere,True,"duplicate (same quantity, other unit/form)",,"derived air property (speed of sound, density, ratios to sea level, vapour pressure)"
+atmosphere/density-altitude,atmosphere,True,"duplicate (same quantity, other unit/form)",,density altitude (ft)
+atmosphere/pressure-altitude,atmosphere,True,"CANDIDATE: real FDR parameter, could be added",,pressure altitude (ft) -- what a barometric altimeter set to 1013 hPa shows
+atmosphere/delta-T,atmosphere,False,constant in flight,,"derived air property (speed of sound, density, ratios to sea level, vapour pressure)"
+atmosphere/SL-graded-delta-T,atmosphere,False,constant in flight,,"derived air property (speed of sound, density, ratios to sea level, vapour pressure)"
+atmosphere/P-sl-psf,atmosphere,False,constant in flight,,"derived air property (speed of sound, density, ratios to sea level, vapour pressure)"
+atmosphere/dew-point-R,atmosphere,False,constant in flight,,"derived air property (speed of sound, density, ratios to sea level, vapour pressure)"
+atmosphere/vapor-pressure-psf,atmosphere,False,constant in flight,,"derived air property (speed of sound, density, ratios to sea level, vapour pressure)"
+atmosphere/saturated-vapor-pressure-psf,atmosphere,True,"duplicate (same quantity, other unit/form)",,"derived air property (speed of sound, density, ratios to sea level, vapour pressure)"
+atmosphere/RH,atmosphere,False,constant in flight,,"derived air property (speed of sound, density, ratios to sea level, vapour pressure)"
+atmosphere/vapor-fraction-ppm,atmosphere,False,constant in flight,,"derived air property (speed of sound, density, ratios to sea level, vapour pressure)"
+atmosphere/psiw-rad,atmosphere,False,constant in flight,,"derived air property (speed of sound, density, ratios to sea level, vapour pressure)"
+atmosphere/wind-north-fps,atmosphere,False,constant in flight,,"derived air property (speed of sound, density, ratios to sea level, vapour pressure)"
+atmosphere/wind-east-fps,atmosphere,False,constant in flight,,"derived air property (speed of sound, density, ratios to sea level, vapour pressure)"
+atmosphere/wind-down-fps,atmosphere,False,constant in flight,,"derived air property (speed of sound, density, ratios to sea level, vapour pressure)"
+atmosphere/wind-mag-fps,atmosphere,False,constant in flight,,"derived air property (speed of sound, density, ratios to sea level, vapour pressure)"
+atmosphere/gust-north-fps,atmosphere,False,constant in flight,,"derived air property (speed of sound, density, ratios to sea level, vapour pressure)"
+atmosphere/gust-east-fps,atmosphere,False,constant in flight,,"derived air property (speed of sound, density, ratios to sea level, vapour pressure)"
+atmosphere/gust-down-fps,atmosphere,False,constant in flight,,"derived air property (speed of sound, density, ratios to sea level, vapour pressure)"
+atmosphere/turb-north-fps,atmosphere,False,constant in flight,,"derived air property (speed of sound, density, ratios to sea level, vapour pressure)"
+atmosphere/turb-east-fps,atmosphere,False,constant in flight,,"derived air property (speed of sound, density, ratios to sea level, vapour pressure)"
+atmosphere/turb-down-fps,atmosphere,False,constant in flight,,"derived air property (speed of sound, density, ratios to sea level, vapour pressure)"
+atmosphere/p-turb-rad_sec,atmosphere,False,constant in flight,,"derived air property (speed of sound, density, ratios to sea level, vapour pressure)"
+atmosphere/q-turb-rad_sec,atmosphere,False,constant in flight,,"derived air property (speed of sound, density, ratios to sea level, vapour pressure)"
+atmosphere/r-turb-rad_sec,atmosphere,False,constant in flight,,"derived air property (speed of sound, density, ratios to sea level, vapour pressure)"
+atmosphere/turb-type,atmosphere,False,constant in flight,,"derived air property (speed of sound, density, ratios to sea level, vapour pressure)"
+atmosphere/turb-rate,atmosphere,False,constant in flight,,"derived air property (speed of sound, density, ratios to sea level, vapour pressure)"
+atmosphere/turb-gain,atmosphere,False,constant in flight,,"derived air property (speed of sound, density, ratios to sea level, vapour pressure)"
+atmosphere/turb-rhythmicity,atmosphere,False,constant in flight,,"derived air property (speed of sound, density, ratios to sea level, vapour pressure)"
+atmosphere/turbulence/milspec/windspeed_at_20ft_AGL-fps,atmosphere,False,constant in flight,,"derived air property (speed of sound, density, ratios to sea level, vapour pressure)"
+atmosphere/turbulence/milspec/severity,atmosphere,False,constant in flight,,"derived air property (speed of sound, density, ratios to sea level, vapour pressure)"
+atmosphere/total-wind-north-fps,atmosphere,False,constant in flight,,"derived air property (speed of sound, density, ratios to sea level, vapour pressure)"
+atmosphere/total-wind-east-fps,atmosphere,False,constant in flight,,"derived air property (speed of sound, density, ratios to sea level, vapour pressure)"
+atmosphere/total-wind-down-fps,atmosphere,False,constant in flight,,"derived air property (speed of sound, density, ratios to sea level, vapour pressure)"
+atmosphere/randomseed,atmosphere,False,constant in flight,,"derived air property (speed of sound, density, ratios to sea level, vapour pressure)"
+fcs/aileron-cmd-norm,fcs,True,RECORDED,CMDAIL,autopilot command to the surface (-1..1)
+fcs/elevator-cmd-norm,fcs,True,RECORDED,CMDELEV,autopilot command to the surface (-1..1)
+fcs/rudder-cmd-norm,fcs,False,constant in flight,,autopilot command to the surface (-1..1)
+fcs/flap-cmd-norm,fcs,False,constant in flight,,
+fcs/speedbrake-cmd-norm,fcs,False,constant in flight,,
+fcs/spoiler-cmd-norm,fcs,False,constant in flight,,
+fcs/pitch-trim-cmd-norm,fcs,False,constant in flight,,
+fcs/roll-trim-cmd-norm,fcs,False,constant in flight,,
+fcs/yaw-trim-cmd-norm,fcs,False,constant in flight,,
+fcs/left-aileron-pos-rad,fcs,True,"duplicate (same quantity, other unit/form)",,surface position in radians / magnitude
+fcs/left-aileron-pos-deg,fcs,True,RECORDED,AIL,control-surface position (deg)
+fcs/left-aileron-pos-norm,fcs,False,constant in flight,,
+fcs/mag-left-aileron-pos-rad,fcs,True,"duplicate (same quantity, other unit/form)",,surface position in radians / magnitude
+fcs/right-aileron-pos-rad,fcs,True,"duplicate (same quantity, other unit/form)",,surface position in radians / magnitude
+fcs/right-aileron-pos-deg,fcs,True,"duplicate (same quantity, other unit/form)",,right aileron (deg) -- mirror of the left aileron in this model
+fcs/right-aileron-pos-norm,fcs,False,constant in flight,,
+fcs/mag-right-aileron-pos-rad,fcs,True,"duplicate (same quantity, other unit/form)",,surface position in radians / magnitude
+fcs/elevator-pos-rad,fcs,True,"duplicate (same quantity, other unit/form)",,surface position in radians / magnitude
+fcs/elevator-pos-deg,fcs,True,RECORDED,ELEV,control-surface position (deg)
+fcs/elevator-pos-norm,fcs,False,constant in flight,,
+fcs/mag-elevator-pos-rad,fcs,True,"duplicate (same quantity, other unit/form)",,surface position in radians / magnitude
+fcs/rudder-pos-rad,fcs,True,"duplicate (same quantity, other unit/form)",,surface position in radians / magnitude
+fcs/rudder-pos-deg,fcs,True,RECORDED,RUD,control-surface position (deg)
+fcs/rudder-pos-norm,fcs,False,constant in flight,,
+fcs/mag-rudder-pos-rad,fcs,True,"duplicate (same quantity, other unit/form)",,surface position in radians / magnitude
+fcs/flap-pos-rad,fcs,False,constant in flight,,surface position in radians / magnitude
+fcs/flap-pos-deg,fcs,False,constant in flight,,
+fcs/flap-pos-norm,fcs,False,constant in flight,,
+fcs/speedbrake-pos-rad,fcs,False,constant in flight,,surface position in radians / magnitude
+fcs/speedbrake-pos-deg,fcs,False,constant in flight,,
+fcs/speedbrake-pos-norm,fcs,False,constant in flight,,
+fcs/mag-speedbrake-pos-rad,fcs,False,constant in flight,,surface position in radians / magnitude
+fcs/spoiler-pos-rad,fcs,False,constant in flight,,surface position in radians / magnitude
+fcs/spoiler-pos-deg,fcs,False,constant in flight,,
+fcs/spoiler-pos-norm,fcs,False,constant in flight,,
+fcs/mag-spoiler-pos-rad,fcs,False,constant in flight,,surface position in radians / magnitude
+fcs/left-brake-cmd-norm,fcs,False,constant in flight,,
+fcs/right-brake-cmd-norm,fcs,False,constant in flight,,
+fcs/center-brake-cmd-norm,fcs,False,constant in flight,,
+fcs/wing-fold-pos-norm,fcs,False,constant in flight,,
+fcs/steer-cmd-norm,fcs,False,constant in flight,,
+fcs/steer-pos-deg,fcs,False,constant in flight,,
+fcs/throttle-cmd-norm,fcs,True,RECORDED,TLA_1,throttle lever command (0..1)
+fcs/throttle-pos-norm,fcs,True,"CANDIDATE: real FDR parameter, could be added",,throttle position actually applied to the engine (0..1)
+fcs/mixture-cmd-norm,fcs,False,constant in flight,,
+fcs/mixture-pos-norm,fcs,False,constant in flight,,
+fcs/advance-cmd-norm,fcs,False,constant in flight,,
+fcs/advance-pos-norm,fcs,False,constant in flight,,
+fcs/feather-cmd-norm,fcs,False,constant in flight,,
+fcs/feather-pos-norm,fcs,False,constant in flight,,
+fcs/throttle-cmd-norm[1],fcs,True,RECORDED,TLA_2,throttle lever command (0..1)
+fcs/throttle-pos-norm[1],fcs,True,"CANDIDATE: real FDR parameter, could be added",,throttle position actually applied to the engine (0..1)
+fcs/mixture-cmd-norm[1],fcs,False,constant in flight,,
+fcs/mixture-pos-norm[1],fcs,False,constant in flight,,
+fcs/advance-cmd-norm[1],fcs,False,constant in flight,,
+fcs/advance-pos-norm[1],fcs,False,constant in flight,,
+fcs/feather-cmd-norm[1],fcs,False,constant in flight,,
+fcs/feather-pos-norm[1],fcs,False,constant in flight,,
+fcs/throttle-cmd-norm[2],fcs,True,RECORDED,TLA_3,throttle lever command (0..1)
+fcs/throttle-pos-norm[2],fcs,True,"CANDIDATE: real FDR parameter, could be added",,throttle position actually applied to the engine (0..1)
+fcs/mixture-cmd-norm[2],fcs,False,constant in flight,,
+fcs/mixture-pos-norm[2],fcs,False,constant in flight,,
+fcs/advance-cmd-norm[2],fcs,False,constant in flight,,
+fcs/advance-pos-norm[2],fcs,False,constant in flight,,
+fcs/feather-cmd-norm[2],fcs,False,constant in flight,,
+fcs/feather-pos-norm[2],fcs,False,constant in flight,,
+fcs/throttle-cmd-norm[3],fcs,True,RECORDED,TLA_4,throttle lever command (0..1)
+fcs/throttle-pos-norm[3],fcs,True,"CANDIDATE: real FDR parameter, could be added",,throttle position actually applied to the engine (0..1)
+fcs/mixture-cmd-norm[3],fcs,False,constant in flight,,
+fcs/mixture-pos-norm[3],fcs,False,constant in flight,,
+fcs/advance-cmd-norm[3],fcs,False,constant in flight,,
+fcs/advance-pos-norm[3],fcs,False,constant in flight,,
+fcs/feather-cmd-norm[3],fcs,False,constant in flight,,
+fcs/feather-pos-norm[3],fcs,False,constant in flight,,
+fcs/pitch-trim-sum,fcs,True,internal model quantity,,intermediate signal inside the flight-control system
+fcs/elevator-control,fcs,True,internal model quantity,,intermediate signal inside the flight-control system
+fcs/roll-trim-sum,fcs,True,internal model quantity,,intermediate signal inside the flight-control system
+fcs/left-aileron-control,fcs,True,internal model quantity,,intermediate signal inside the flight-control system
+fcs/right-aileron-control,fcs,True,internal model quantity,,intermediate signal inside the flight-control system
+fcs/rudder-command-sum,fcs,False,constant in flight,,
+fcs/yaw-damper-rate,fcs,True,internal model quantity,,the model's built-in yaw damper signals
+fcs/yaw-damper-beta,fcs,False,constant in flight,,the model's built-in yaw damper signals
+fcs/yaw-damper-sum,fcs,True,internal model quantity,,the model's built-in yaw damper signals
+fcs/yaw-damper-final,fcs,True,internal model quantity,,the model's built-in yaw damper signals
+fcs/rudder-sum,fcs,True,internal model quantity,,intermediate signal inside the flight-control system
+fcs/rudder-control,fcs,True,internal model quantity,,intermediate signal inside the flight-control system
+fcs/flaps-control,fcs,False,constant in flight,,intermediate signal inside the flight-control system
+fcs/flap-position-normalizer,fcs,False,constant in flight,,
+fcs/gear-control,fcs,False,constant in flight,,intermediate signal inside the flight-control system
+fcs/speedbrake-control,fcs,False,constant in flight,,intermediate signal inside the flight-control system
+gear/gear-pos-norm,gear,False,constant in flight,,gear height above ground (ft) -- in the air this just follows altitude
+gear/gear-cmd-norm,gear,False,constant in flight,,gear height above ground (ft) -- in the air this just follows altitude
+gear/tailhook-pos-norm,gear,False,constant in flight,,gear height above ground (ft) -- in the air this just follows altitude
+gear/num-units,gear,False,constant in flight,,gear height above ground (ft) -- in the air this just follows altitude
+gear/wow,gear,False,constant in flight,,gear height above ground (ft) -- in the air this just follows altitude
+gear/unit/AGL-ft,gear,True,reference-frame / navigation geometry,,gear height above ground (ft) -- in the air this just follows altitude
+gear/unit/WOW,gear,False,constant in flight,,gear height above ground (ft) -- in the air this just follows altitude
+gear/unit/x-position,gear,False,constant in flight,,gear height above ground (ft) -- in the air this just follows altitude
+gear/unit/y-position,gear,False,constant in flight,,gear height above ground (ft) -- in the air this just follows altitude
+gear/unit/z-position,gear,False,constant in flight,,gear height above ground (ft) -- in the air this just follows altitude
+gear/unit/compression-ft,gear,False,constant in flight,,gear height above ground (ft) -- in the air this just follows altitude
+gear/unit/compression-velocity-fps,gear,False,constant in flight,,gear height above ground (ft) -- in the air this just follows altitude
+gear/unit/static_friction_coeff,gear,False,constant in flight,,gear height above ground (ft) -- in the air this just follows altitude
+gear/unit/dynamic_friction_coeff,gear,False,constant in flight,,gear height above ground (ft) -- in the air this just follows altitude
+gear/unit/slip-angle-deg,gear,False,constant in flight,,gear height above ground (ft) -- in the air this just follows altitude
+gear/unit/wheel-speed-fps,gear,False,constant in flight,,gear height above ground (ft) -- in the air this just follows altitude
+gear/unit/side_friction_coeff,gear,False,constant in flight,,gear height above ground (ft) -- in the air this just follows altitude
+gear/unit/rolling_friction_coeff,gear,False,constant in flight,,gear height above ground (ft) -- in the air this just follows altitude
+gear/unit/pos-norm,gear,False,constant in flight,,gear height above ground (ft) -- in the air this just follows altitude
+gear/unit/solid,gear,False,constant in flight,,gear height above ground (ft) -- in the air this just follows altitude
+gear/unit/bumpiness,gear,False,constant in flight,,gear height above ground (ft) -- in the air this just follows altitude
+gear/unit/maximum-force-lbs,gear,False,constant in flight,,gear height above ground (ft) -- in the air this just follows altitude
+gear/unit/rolling_friction-factor,gear,False,constant in flight,,gear height above ground (ft) -- in the air this just follows altitude
+gear/unit/static-friction-factor,gear,False,constant in flight,,gear height above ground (ft) -- in the air this just follows altitude
+gear/unit[1]/AGL-ft,gear,True,reference-frame / navigation geometry,,gear height above ground (ft) -- in the air this just follows altitude
+gear/unit[1]/WOW,gear,False,constant in flight,,gear height above ground (ft) -- in the air this just follows altitude
+gear/unit[1]/x-position,gear,False,constant in flight,,gear height above ground (ft) -- in the air this just follows altitude
+gear/unit[1]/y-position,gear,False,constant in flight,,gear height above ground (ft) -- in the air this just follows altitude
+gear/unit[1]/z-position,gear,False,constant in flight,,gear height above ground (ft) -- in the air this just follows altitude
+gear/unit[1]/compression-ft,gear,False,constant in flight,,gear height above ground (ft) -- in the air this just follows altitude
+gear/unit[1]/compression-velocity-fps,gear,False,constant in flight,,gear height above ground (ft) -- in the air this just follows altitude
+gear/unit[1]/static_friction_coeff,gear,False,constant in flight,,gear height above ground (ft) -- in the air this just follows altitude
+gear/unit[1]/dynamic_friction_coeff,gear,False,constant in flight,,gear height above ground (ft) -- in the air this just follows altitude
+gear/unit[1]/slip-angle-deg,gear,False,constant in flight,,gear height above ground (ft) -- in the air this just follows altitude
+gear/unit[1]/wheel-speed-fps,gear,False,constant in flight,,gear height above ground (ft) -- in the air this just follows altitude
+gear/unit[1]/side_friction_coeff,gear,False,constant in flight,,gear height above ground (ft) -- in the air this just follows altitude
+gear/unit[1]/rolling_friction_coeff,gear,False,constant in flight,,gear height above ground (ft) -- in the air this just follows altitude
+gear/unit[1]/pos-norm,gear,False,constant in flight,,gear height above ground (ft) -- in the air this just follows altitude
+gear/unit[1]/solid,gear,False,constant in flight,,gear height above ground (ft) -- in the air this just follows altitude
+gear/unit[1]/bumpiness,gear,False,constant in flight,,gear height above ground (ft) -- in the air this just follows altitude
+gear/unit[1]/maximum-force-lbs,gear,False,constant in flight,,gear height above ground (ft) -- in the air this just follows altitude
+gear/unit[1]/rolling_friction-factor,gear,False,constant in flight,,gear height above ground (ft) -- in the air this just follows altitude
+gear/unit[1]/static-friction-factor,gear,False,constant in flight,,gear height above ground (ft) -- in the air this just follows altitude
+gear/unit[2]/AGL-ft,gear,True,reference-frame / navigation geometry,,gear height above ground (ft) -- in the air this just follows altitude
+gear/unit[2]/WOW,gear,False,constant in flight,,gear height above ground (ft) -- in the air this just follows altitude
+gear/unit[2]/x-position,gear,False,constant in flight,,gear height above ground (ft) -- in the air this just follows altitude
+gear/unit[2]/y-position,gear,False,constant in flight,,gear height above ground (ft) -- in the air this just follows altitude
+gear/unit[2]/z-position,gear,False,constant in flight,,gear height above ground (ft) -- in the air this just follows altitude
+gear/unit[2]/compression-ft,gear,False,constant in flight,,gear height above ground (ft) -- in the air this just follows altitude
+gear/unit[2]/compression-velocity-fps,gear,False,constant in flight,,gear height above ground (ft) -- in the air this just follows altitude
+gear/unit[2]/static_friction_coeff,gear,False,constant in flight,,gear height above ground (ft) -- in the air this just follows altitude
+gear/unit[2]/dynamic_friction_coeff,gear,False,constant in flight,,gear height above ground (ft) -- in the air this just follows altitude
+gear/unit[2]/slip-angle-deg,gear,False,constant in flight,,gear height above ground (ft) -- in the air this just follows altitude
+gear/unit[2]/wheel-speed-fps,gear,False,constant in flight,,gear height above ground (ft) -- in the air this just follows altitude
+gear/unit[2]/side_friction_coeff,gear,False,constant in flight,,gear height above ground (ft) -- in the air this just follows altitude
+gear/unit[2]/rolling_friction_coeff,gear,False,constant in flight,,gear height above ground (ft) -- in the air this just follows altitude
+gear/unit[2]/pos-norm,gear,False,constant in flight,,gear height above ground (ft) -- in the air this just follows altitude
+gear/unit[2]/solid,gear,False,constant in flight,,gear height above ground (ft) -- in the air this just follows altitude
+gear/unit[2]/bumpiness,gear,False,constant in flight,,gear height above ground (ft) -- in the air this just follows altitude
+gear/unit[2]/maximum-force-lbs,gear,False,constant in flight,,gear height above ground (ft) -- in the air this just follows altitude
+gear/unit[2]/rolling_friction-factor,gear,False,constant in flight,,gear height above ground (ft) -- in the air this just follows altitude
+gear/unit[2]/static-friction-factor,gear,False,constant in flight,,gear height above ground (ft) -- in the air this just follows altitude
+inertia/mass-slugs,inertia,False,constant in flight,,mass moments of inertia (change slowly with fuel burn)
+inertia/weight-lbs,inertia,False,constant in flight,,gross weight (lb)
+inertia/empty-weight-lbs,inertia,False,constant in flight,,mass moments of inertia (change slowly with fuel burn)
+inertia/cg-x-in,inertia,False,constant in flight,,mass moments of inertia (change slowly with fuel burn)
+inertia/cg-y-in,inertia,False,constant in flight,,mass moments of inertia (change slowly with fuel burn)
+inertia/cg-z-in,inertia,False,constant in flight,,mass moments of inertia (change slowly with fuel burn)
+inertia/ixx-slugs_ft2,inertia,True,internal model quantity,,mass moments of inertia (change slowly with fuel burn)
+inertia/iyy-slugs_ft2,inertia,True,internal model quantity,,mass moments of inertia (change slowly with fuel burn)
+inertia/izz-slugs_ft2,inertia,False,constant in flight,,mass moments of inertia (change slowly with fuel burn)
+inertia/ixy-slugs_ft2,inertia,False,constant in flight,,mass moments of inertia (change slowly with fuel burn)
+inertia/ixz-slugs_ft2,inertia,False,constant in flight,,mass moments of inertia (change slowly with fuel burn)
+inertia/iyz-slugs_ft2,inertia,False,constant in flight,,mass moments of inertia (change slowly with fuel burn)
+propulsion/tat-r,propulsion,True,"duplicate (same quantity, other unit/form)",,total air temperature (Rankine)
+propulsion/tat-c,propulsion,True,RECORDED,TAT,total air temperature (deg C)
+propulsion/pt-lbs_sqft,propulsion,True,"CANDIDATE: real FDR parameter, could be added",,total (pitot) pressure (lb/ft^2)
+propulsion/tank/contents-lbs,propulsion,True,RECORDED,FQ_1,fuel in tank (lb)
+propulsion/tank/unusable-volume-gal,propulsion,False,constant in flight,,
+propulsion/tank/pct-full,propulsion,True,"duplicate (same quantity, other unit/form)",,tank contents in percent
+propulsion/tank/density-lbs_per_gal,propulsion,False,constant in flight,,
+propulsion/tank/priority,propulsion,False,constant in flight,,
+propulsion/tank/external-flow-rate-pps,propulsion,False,constant in flight,,
+propulsion/tank/local-ixx-slug_ft2,propulsion,False,constant in flight,,
+propulsion/tank/local-iyy-slug_ft2,propulsion,False,constant in flight,,
+propulsion/tank/local-izz-slug_ft2,propulsion,False,constant in flight,,
+propulsion/tank/x-position,propulsion,False,constant in flight,,
+propulsion/tank/y-position,propulsion,False,constant in flight,,
+propulsion/tank/z-position,propulsion,False,constant in flight,,
+propulsion/tank[1]/contents-lbs,propulsion,True,RECORDED,FQ_2,fuel in tank (lb)
+propulsion/tank[1]/unusable-volume-gal,propulsion,False,constant in flight,,
+propulsion/tank[1]/pct-full,propulsion,True,"duplicate (same quantity, other unit/form)",,tank contents in percent
+propulsion/tank[1]/density-lbs_per_gal,propulsion,False,constant in flight,,
+propulsion/tank[1]/priority,propulsion,False,constant in flight,,
+propulsion/tank[1]/external-flow-rate-pps,propulsion,False,constant in flight,,
+propulsion/tank[1]/local-ixx-slug_ft2,propulsion,False,constant in flight,,
+propulsion/tank[1]/local-iyy-slug_ft2,propulsion,False,constant in flight,,
+propulsion/tank[1]/local-izz-slug_ft2,propulsion,False,constant in flight,,
+propulsion/tank[1]/x-position,propulsion,False,constant in flight,,
+propulsion/tank[1]/y-position,propulsion,False,constant in flight,,
+propulsion/tank[1]/z-position,propulsion,False,constant in flight,,
+propulsion/tank[2]/contents-lbs,propulsion,True,RECORDED,FQ_3,fuel in tank (lb)
+propulsion/tank[2]/unusable-volume-gal,propulsion,False,constant in flight,,
+propulsion/tank[2]/pct-full,propulsion,True,"duplicate (same quantity, other unit/form)",,tank contents in percent
+propulsion/tank[2]/density-lbs_per_gal,propulsion,False,constant in flight,,
+propulsion/tank[2]/priority,propulsion,False,constant in flight,,
+propulsion/tank[2]/external-flow-rate-pps,propulsion,False,constant in flight,,
+propulsion/tank[2]/local-ixx-slug_ft2,propulsion,False,constant in flight,,
+propulsion/tank[2]/local-iyy-slug_ft2,propulsion,False,constant in flight,,
+propulsion/tank[2]/local-izz-slug_ft2,propulsion,False,constant in flight,,
+propulsion/tank[2]/x-position,propulsion,False,constant in flight,,
+propulsion/tank[2]/y-position,propulsion,False,constant in flight,,
+propulsion/tank[2]/z-position,propulsion,False,constant in flight,,
+propulsion/tank[3]/contents-lbs,propulsion,True,RECORDED,FQ_4,fuel in tank (lb)
+propulsion/tank[3]/unusable-volume-gal,propulsion,False,constant in flight,,
+propulsion/tank[3]/pct-full,propulsion,True,"duplicate (same quantity, other unit/form)",,tank contents in percent
+propulsion/tank[3]/density-lbs_per_gal,propulsion,False,constant in flight,,
+propulsion/tank[3]/priority,propulsion,False,constant in flight,,
+propulsion/tank[3]/external-flow-rate-pps,propulsion,False,constant in flight,,
+propulsion/tank[3]/local-ixx-slug_ft2,propulsion,False,constant in flight,,
+propulsion/tank[3]/local-iyy-slug_ft2,propulsion,False,constant in flight,,
+propulsion/tank[3]/local-izz-slug_ft2,propulsion,False,constant in flight,,
+propulsion/tank[3]/x-position,propulsion,False,constant in flight,,
+propulsion/tank[3]/y-position,propulsion,False,constant in flight,,
+propulsion/tank[3]/z-position,propulsion,False,constant in flight,,
+propulsion/tank[4]/contents-lbs,propulsion,False,RECORDED,FQ_5,fuel in tank (lb)
+propulsion/tank[4]/unusable-volume-gal,propulsion,False,constant in flight,,
+propulsion/tank[4]/pct-full,propulsion,False,constant in flight,,tank contents in percent
+propulsion/tank[4]/density-lbs_per_gal,propulsion,False,constant in flight,,
+propulsion/tank[4]/priority,propulsion,False,constant in flight,,
+propulsion/tank[4]/external-flow-rate-pps,propulsion,False,constant in flight,,
+propulsion/tank[4]/local-ixx-slug_ft2,propulsion,False,constant in flight,,
+propulsion/tank[4]/local-iyy-slug_ft2,propulsion,False,constant in flight,,
+propulsion/tank[4]/local-izz-slug_ft2,propulsion,False,constant in flight,,
+propulsion/tank[4]/x-position,propulsion,False,constant in flight,,
+propulsion/tank[4]/y-position,propulsion,False,constant in flight,,
+propulsion/tank[4]/z-position,propulsion,False,constant in flight,,
+propulsion/engine/IdleThrust,propulsion,True,internal model quantity,,"engine model internals (idle/max thrust at this condition, specific fuel consumption)"
+propulsion/engine/MilThrust,propulsion,True,internal model quantity,,"engine model internals (idle/max thrust at this condition, specific fuel consumption)"
+propulsion/engine/x-reference-position,propulsion,False,constant in flight,,
+propulsion/engine/y-reference-position,propulsion,False,constant in flight,,
+propulsion/engine/z-reference-position,propulsion,False,constant in flight,,
+propulsion/engine/x-position,propulsion,False,constant in flight,,
+propulsion/engine/y-position,propulsion,False,constant in flight,,
+propulsion/engine/z-position,propulsion,False,constant in flight,,
+propulsion/engine/pitch-angle-rad,propulsion,False,constant in flight,,
+propulsion/engine/yaw-angle-rad,propulsion,False,constant in flight,,
+propulsion/engine/reverser-angle-rad,propulsion,False,constant in flight,,
+propulsion/engine/set-running,propulsion,False,constant in flight,,
+propulsion/engine/thrust-lbs,propulsion,True,"simulated, not recorded (truth)",,"engine thrust (lb) -- simulated, dropped (real FDRs do not record thrust)"
+propulsion/engine/fuel-flow-rate-pps,propulsion,True,RECORDED,FF_1 (x3600 -> lb/h),engine fan speed N1 / core speed N2 (%) / fuel flow
+propulsion/engine/fuel-flow-rate-gph,propulsion,True,"duplicate (same quantity, other unit/form)",,fuel flow in gallons/hour
+propulsion/engine/fuel-used-lbs,propulsion,True,"CANDIDATE: real FDR parameter, could be added",,fuel used by the engine since start (lb)
+propulsion/engine/n1,propulsion,True,RECORDED,N1_1,engine fan speed N1 / core speed N2 (%) / fuel flow
+propulsion/engine/n2,propulsion,True,RECORDED,N2_1,engine fan speed N1 / core speed N2 (%) / fuel flow
+propulsion/engine/injection_cmd,propulsion,False,constant in flight,,
+propulsion/engine/seized,propulsion,False,constant in flight,,
+propulsion/engine/stalled,propulsion,False,constant in flight,,
+propulsion/engine/bleed-factor,propulsion,False,constant in flight,,
+propulsion/engine/MaxN1,propulsion,False,constant in flight,,
+propulsion/engine/MaxN2,propulsion,False,constant in flight,,
+propulsion/engine/InjectionTimer,propulsion,False,constant in flight,,
+propulsion/engine/InjWaterNorm,propulsion,False,constant in flight,,
+propulsion/engine/InjN1increment,propulsion,False,constant in flight,,
+propulsion/engine/InjN2increment,propulsion,False,constant in flight,,
+propulsion/engine/atsfc,propulsion,False,constant in flight,,
+propulsion/engine/tsfc,propulsion,True,internal model quantity,,"engine model internals (idle/max thrust at this condition, specific fuel consumption)"
+propulsion/engine[1]/IdleThrust,propulsion,True,internal model quantity,,"engine model internals (idle/max thrust at this condition, specific fuel consumption)"
+propulsion/engine[1]/MilThrust,propulsion,True,internal model quantity,,"engine model internals (idle/max thrust at this condition, specific fuel consumption)"
+propulsion/engine[1]/x-reference-position,propulsion,False,constant in flight,,
+propulsion/engine[1]/y-reference-position,propulsion,False,constant in flight,,
+propulsion/engine[1]/z-reference-position,propulsion,False,constant in flight,,
+propulsion/engine[1]/x-position,propulsion,False,constant in flight,,
+propulsion/engine[1]/y-position,propulsion,False,constant in flight,,
+propulsion/engine[1]/z-position,propulsion,False,constant in flight,,
+propulsion/engine[1]/pitch-angle-rad,propulsion,False,constant in flight,,
+propulsion/engine[1]/yaw-angle-rad,propulsion,False,constant in flight,,
+propulsion/engine[1]/reverser-angle-rad,propulsion,False,constant in flight,,
+propulsion/engine[1]/set-running,propulsion,False,constant in flight,,
+propulsion/engine[1]/thrust-lbs,propulsion,True,"simulated, not recorded (truth)",,"engine thrust (lb) -- simulated, dropped (real FDRs do not record thrust)"
+propulsion/engine[1]/fuel-flow-rate-pps,propulsion,True,RECORDED,FF_2 (x3600 -> lb/h),engine fan speed N1 / core speed N2 (%) / fuel flow
+propulsion/engine[1]/fuel-flow-rate-gph,propulsion,True,"duplicate (same quantity, other unit/form)",,fuel flow in gallons/hour
+propulsion/engine[1]/fuel-used-lbs,propulsion,True,"CANDIDATE: real FDR parameter, could be added",,fuel used by the engine since start (lb)
+propulsion/engine[1]/n1,propulsion,True,RECORDED,N1_2,engine fan speed N1 / core speed N2 (%) / fuel flow
+propulsion/engine[1]/n2,propulsion,True,RECORDED,N2_2,engine fan speed N1 / core speed N2 (%) / fuel flow
+propulsion/engine[1]/injection_cmd,propulsion,False,constant in flight,,
+propulsion/engine[1]/seized,propulsion,False,constant in flight,,
+propulsion/engine[1]/stalled,propulsion,False,constant in flight,,
+propulsion/engine[1]/bleed-factor,propulsion,False,constant in flight,,
+propulsion/engine[1]/MaxN1,propulsion,False,constant in flight,,
+propulsion/engine[1]/MaxN2,propulsion,False,constant in flight,,
+propulsion/engine[1]/InjectionTimer,propulsion,False,constant in flight,,
+propulsion/engine[1]/InjWaterNorm,propulsion,False,constant in flight,,
+propulsion/engine[1]/InjN1increment,propulsion,False,constant in flight,,
+propulsion/engine[1]/InjN2increment,propulsion,False,constant in flight,,
+propulsion/engine[1]/atsfc,propulsion,False,constant in flight,,
+propulsion/engine[1]/tsfc,propulsion,True,internal model quantity,,"engine model internals (idle/max thrust at this condition, specific fuel consumption)"
+propulsion/engine[2]/IdleThrust,propulsion,True,internal model quantity,,"engine model internals (idle/max thrust at this condition, specific fuel consumption)"
+propulsion/engine[2]/MilThrust,propulsion,True,internal model quantity,,"engine model internals (idle/max thrust at this condition, specific fuel consumption)"
+propulsion/engine[2]/x-reference-position,propulsion,False,constant in flight,,
+propulsion/engine[2]/y-reference-position,propulsion,False,constant in flight,,
+propulsion/engine[2]/z-reference-position,propulsion,False,constant in flight,,
+propulsion/engine[2]/x-position,propulsion,False,constant in flight,,
+propulsion/engine[2]/y-position,propulsion,False,constant in flight,,
+propulsion/engine[2]/z-position,propulsion,False,constant in flight,,
+propulsion/engine[2]/pitch-angle-rad,propulsion,False,constant in flight,,
+propulsion/engine[2]/yaw-angle-rad,propulsion,False,constant in flight,,
+propulsion/engine[2]/reverser-angle-rad,propulsion,False,constant in flight,,
+propulsion/engine[2]/set-running,propulsion,False,constant in flight,,
+propulsion/engine[2]/thrust-lbs,propulsion,True,"simulated, not recorded (truth)",,"engine thrust (lb) -- simulated, dropped (real FDRs do not record thrust)"
+propulsion/engine[2]/fuel-flow-rate-pps,propulsion,True,RECORDED,FF_3 (x3600 -> lb/h),engine fan speed N1 / core speed N2 (%) / fuel flow
+propulsion/engine[2]/fuel-flow-rate-gph,propulsion,True,"duplicate (same quantity, other unit/form)",,fuel flow in gallons/hour
+propulsion/engine[2]/fuel-used-lbs,propulsion,True,"CANDIDATE: real FDR parameter, could be added",,fuel used by the engine since start (lb)
+propulsion/engine[2]/n1,propulsion,True,RECORDED,N1_3,engine fan speed N1 / core speed N2 (%) / fuel flow
+propulsion/engine[2]/n2,propulsion,True,RECORDED,N2_3,engine fan speed N1 / core speed N2 (%) / fuel flow
+propulsion/engine[2]/injection_cmd,propulsion,False,constant in flight,,
+propulsion/engine[2]/seized,propulsion,False,constant in flight,,
+propulsion/engine[2]/stalled,propulsion,False,constant in flight,,
+propulsion/engine[2]/bleed-factor,propulsion,False,constant in flight,,
+propulsion/engine[2]/MaxN1,propulsion,False,constant in flight,,
+propulsion/engine[2]/MaxN2,propulsion,False,constant in flight,,
+propulsion/engine[2]/InjectionTimer,propulsion,False,constant in flight,,
+propulsion/engine[2]/InjWaterNorm,propulsion,False,constant in flight,,
+propulsion/engine[2]/InjN1increment,propulsion,False,constant in flight,,
+propulsion/engine[2]/InjN2increment,propulsion,False,constant in flight,,
+propulsion/engine[2]/atsfc,propulsion,False,constant in flight,,
+propulsion/engine[2]/tsfc,propulsion,True,internal model quantity,,"engine model internals (idle/max thrust at this condition, specific fuel consumption)"
+propulsion/engine[3]/IdleThrust,propulsion,True,internal model quantity,,"engine model internals (idle/max thrust at this condition, specific fuel consumption)"
+propulsion/engine[3]/MilThrust,propulsion,True,internal model quantity,,"engine model internals (idle/max thrust at this condition, specific fuel consumption)"
+propulsion/engine[3]/x-reference-position,propulsion,False,constant in flight,,
+propulsion/engine[3]/y-reference-position,propulsion,False,constant in flight,,
+propulsion/engine[3]/z-reference-position,propulsion,False,constant in flight,,
+propulsion/engine[3]/x-position,propulsion,False,constant in flight,,
+propulsion/engine[3]/y-position,propulsion,False,constant in flight,,
+propulsion/engine[3]/z-position,propulsion,False,constant in flight,,
+propulsion/engine[3]/pitch-angle-rad,propulsion,False,constant in flight,,
+propulsion/engine[3]/yaw-angle-rad,propulsion,False,constant in flight,,
+propulsion/engine[3]/reverser-angle-rad,propulsion,False,constant in flight,,
+propulsion/engine[3]/set-running,propulsion,False,constant in flight,,
+propulsion/engine[3]/thrust-lbs,propulsion,True,"simulated, not recorded (truth)",,"engine thrust (lb) -- simulated, dropped (real FDRs do not record thrust)"
+propulsion/engine[3]/fuel-flow-rate-pps,propulsion,True,RECORDED,FF_4 (x3600 -> lb/h),engine fan speed N1 / core speed N2 (%) / fuel flow
+propulsion/engine[3]/fuel-flow-rate-gph,propulsion,True,"duplicate (same quantity, other unit/form)",,fuel flow in gallons/hour
+propulsion/engine[3]/fuel-used-lbs,propulsion,True,"CANDIDATE: real FDR parameter, could be added",,fuel used by the engine since start (lb)
+propulsion/engine[3]/n1,propulsion,True,RECORDED,N1_4,engine fan speed N1 / core speed N2 (%) / fuel flow
+propulsion/engine[3]/n2,propulsion,True,RECORDED,N2_4,engine fan speed N1 / core speed N2 (%) / fuel flow
+propulsion/engine[3]/injection_cmd,propulsion,False,constant in flight,,
+propulsion/engine[3]/seized,propulsion,False,constant in flight,,
+propulsion/engine[3]/stalled,propulsion,False,constant in flight,,
+propulsion/engine[3]/bleed-factor,propulsion,False,constant in flight,,
+propulsion/engine[3]/MaxN1,propulsion,False,constant in flight,,
+propulsion/engine[3]/MaxN2,propulsion,False,constant in flight,,
+propulsion/engine[3]/InjectionTimer,propulsion,False,constant in flight,,
+propulsion/engine[3]/InjWaterNorm,propulsion,False,constant in flight,,
+propulsion/engine[3]/InjN1increment,propulsion,False,constant in flight,,
+propulsion/engine[3]/InjN2increment,propulsion,False,constant in flight,,
+propulsion/engine[3]/atsfc,propulsion,False,constant in flight,,
+propulsion/engine[3]/tsfc,propulsion,True,internal model quantity,,"engine model internals (idle/max thrust at this condition, specific fuel consumption)"
+propulsion/starter_cmd,propulsion,False,constant in flight,,
+propulsion/cutoff_cmd,propulsion,False,constant in flight,,
+propulsion/active_engine,propulsion,False,constant in flight,,
+propulsion/total-fuel-lbs,propulsion,True,"CANDIDATE: real FDR parameter, could be added",,total fuel on board (lb)
+propulsion/total-oxidizer-lbs,propulsion,False,constant in flight,,
+propulsion/refuel,propulsion,False,constant in flight,,
+propulsion/fuel_dump,propulsion,False,constant in flight,,
+accelerations/a-pilot-x-ft_sec2,accelerations,True,"duplicate (same quantity, other unit/form)",,acceleration at the pilot station (ft/s^2)
+accelerations/a-pilot-y-ft_sec2,accelerations,True,"duplicate (same quantity, other unit/form)",,acceleration at the pilot station (ft/s^2)
+accelerations/a-pilot-z-ft_sec2,accelerations,True,"duplicate (same quantity, other unit/form)",,acceleration at the pilot station (ft/s^2)
+accelerations/n-pilot-x-norm,accelerations,True,"duplicate (same quantity, other unit/form)",,load factor at the pilot station (g)
+accelerations/n-pilot-y-norm,accelerations,True,"duplicate (same quantity, other unit/form)",,load factor at the pilot station (g)
+accelerations/n-pilot-z-norm,accelerations,True,"duplicate (same quantity, other unit/form)",,load factor at the pilot station (g)
+accelerations/Nx,accelerations,True,"CANDIDATE: real FDR parameter, could be added",,load factor along body x/y/z (g) -- an FDR records vertical/lateral/longitudinal g
+accelerations/Ny,accelerations,True,"CANDIDATE: real FDR parameter, could be added",,load factor along body x/y/z (g) -- an FDR records vertical/lateral/longitudinal g
+accelerations/Nz,accelerations,True,"CANDIDATE: real FDR parameter, could be added",,load factor along body x/y/z (g) -- an FDR records vertical/lateral/longitudinal g
+accelerations/pdot-rad_sec2,accelerations,True,"CANDIDATE: real FDR parameter, could be added",,angular acceleration about body x/y/z (rad/s^2)
+accelerations/qdot-rad_sec2,accelerations,True,"CANDIDATE: real FDR parameter, could be added",,angular acceleration about body x/y/z (rad/s^2)
+accelerations/rdot-rad_sec2,accelerations,True,"CANDIDATE: real FDR parameter, could be added",,angular acceleration about body x/y/z (rad/s^2)
+accelerations/pidot-rad_sec2,accelerations,True,reference-frame / navigation geometry,,inertial-frame angular acceleration
+accelerations/qidot-rad_sec2,accelerations,True,reference-frame / navigation geometry,,inertial-frame angular acceleration
+accelerations/ridot-rad_sec2,accelerations,True,reference-frame / navigation geometry,,inertial-frame angular acceleration
+accelerations/udot-ft_sec2,accelerations,True,internal model quantity,,body-axis linear acceleration (ft/s^2)
+accelerations/vdot-ft_sec2,accelerations,True,internal model quantity,,body-axis linear acceleration (ft/s^2)
+accelerations/wdot-ft_sec2,accelerations,True,internal model quantity,,body-axis linear acceleration (ft/s^2)
+accelerations/uidot-ft_sec2,accelerations,True,reference-frame / navigation geometry,,inertial-frame linear acceleration
+accelerations/vidot-ft_sec2,accelerations,True,reference-frame / navigation geometry,,inertial-frame linear acceleration
+accelerations/widot-ft_sec2,accelerations,True,reference-frame / navigation geometry,,inertial-frame linear acceleration
+accelerations/gravity-ft_sec2,accelerations,True,reference-frame / navigation geometry,,local gravity (ft/s^2)
+forces/load-factor,forces,True,"duplicate (same quantity, other unit/form)",,total load factor (g)
+forces/fbx-aero-lbs,forces,True,internal model quantity,,aerodynamic / propulsive / weight force components (lb)
+forces/fby-aero-lbs,forces,True,internal model quantity,,aerodynamic / propulsive / weight force components (lb)
+forces/fbz-aero-lbs,forces,True,internal model quantity,,aerodynamic / propulsive / weight force components (lb)
+forces/fwx-aero-lbs,forces,True,internal model quantity,,aerodynamic / propulsive / weight force components (lb)
+forces/fwy-aero-lbs,forces,True,internal model quantity,,aerodynamic / propulsive / weight force components (lb)
+forces/fwz-aero-lbs,forces,True,internal model quantity,,aerodynamic / propulsive / weight force components (lb)
+forces/fsx-aero-lbs,forces,True,internal model quantity,,aerodynamic / propulsive / weight force components (lb)
+forces/fsy-aero-lbs,forces,True,internal model quantity,,aerodynamic / propulsive / weight force components (lb)
+forces/fsz-aero-lbs,forces,True,internal model quantity,,aerodynamic / propulsive / weight force components (lb)
+forces/lod-norm,forces,True,internal model quantity,,aerodynamic / propulsive / weight force components (lb)
+forces/fbx-weight-lbs,forces,True,internal model quantity,,aerodynamic / propulsive / weight force components (lb)
+forces/fby-weight-lbs,forces,True,internal model quantity,,aerodynamic / propulsive / weight force components (lb)
+forces/fbz-weight-lbs,forces,True,internal model quantity,,aerodynamic / propulsive / weight force components (lb)
+forces/fbx-total-lbs,forces,True,internal model quantity,,aerodynamic / propulsive / weight force components (lb)
+forces/fby-total-lbs,forces,True,internal model quantity,,aerodynamic / propulsive / weight force components (lb)
+forces/fbz-total-lbs,forces,True,internal model quantity,,aerodynamic / propulsive / weight force components (lb)
+forces/fbx-gear-lbs,forces,False,constant in flight,,aerodynamic / propulsive / weight force components (lb)
+forces/fby-gear-lbs,forces,False,constant in flight,,aerodynamic / propulsive / weight force components (lb)
+forces/fbz-gear-lbs,forces,False,constant in flight,,aerodynamic / propulsive / weight force components (lb)
+forces/hold-down,forces,False,constant in flight,,aerodynamic / propulsive / weight force components (lb)
+forces/fbx-prop-lbs,forces,True,internal model quantity,,aerodynamic / propulsive / weight force components (lb)
+forces/fby-prop-lbs,forces,False,constant in flight,,aerodynamic / propulsive / weight force components (lb)
+forces/fbz-prop-lbs,forces,False,constant in flight,,aerodynamic / propulsive / weight force components (lb)
+aero/alpha-rad,aero,True,"duplicate (same quantity, other unit/form)",,angle of attack / sideslip in radians or magnitude
+aero/beta-rad,aero,True,"duplicate (same quantity, other unit/form)",,angle of attack / sideslip in radians or magnitude
+aero/mag-beta-rad,aero,True,"duplicate (same quantity, other unit/form)",,angle of attack / sideslip in radians or magnitude
+aero/alpha-deg,aero,True,RECORDED,AOA,angle of attack (deg)
+aero/beta-deg,aero,True,RECORDED,BETA,sideslip angle (deg)
+aero/mag-beta-deg,aero,True,"duplicate (same quantity, other unit/form)",,angle of attack / sideslip in radians or magnitude
+aero/Re,aero,True,internal model quantity,,Reynolds number / non-dimensionalisation helpers / height over span
+aero/qbar-psf,aero,True,"CANDIDATE: real FDR parameter, could be added",,dynamic pressure (lb/ft^2)
+aero/qbarUW-psf,aero,True,internal model quantity,,dynamic pressure variants used inside the model
+aero/qbarUV-psf,aero,True,internal model quantity,,dynamic pressure variants used inside the model
+aero/alphadot-rad_sec,aero,True,"duplicate (same quantity, other unit/form)",,rate of change of alpha / beta (rad/s)
+aero/betadot-rad_sec,aero,True,"duplicate (same quantity, other unit/form)",,rate of change of alpha / beta (rad/s)
+aero/alphadot-deg_sec,aero,True,"CANDIDATE: real FDR parameter, could be added",,rate of change of angle of attack / sideslip (deg/s)
+aero/betadot-deg_sec,aero,True,"CANDIDATE: real FDR parameter, could be added",,rate of change of angle of attack / sideslip (deg/s)
+aero/h_b-cg-ft,aero,True,internal model quantity,,Reynolds number / non-dimensionalisation helpers / height over span
+aero/h_b-mac-ft,aero,True,internal model quantity,,Reynolds number / non-dimensionalisation helpers / height over span
+aero/cl-squared,aero,True,internal model quantity,,Reynolds number / non-dimensionalisation helpers / height over span
+aero/qbar-area,aero,True,internal model quantity,,dynamic pressure variants used inside the model
+aero/alpha-max-rad,aero,False,constant in flight,,
+aero/alpha-min-rad,aero,False,constant in flight,,
+aero/bi2vel,aero,True,internal model quantity,,Reynolds number / non-dimensionalisation helpers / height over span
+aero/ci2vel,aero,True,internal model quantity,,Reynolds number / non-dimensionalisation helpers / height over span
+aero/alpha-wing-rad,aero,True,"duplicate (same quantity, other unit/form)",,angle of attack / sideslip in radians or magnitude
+aero/stall-hyst-norm,aero,False,constant in flight,,
+aero/coefficient/CD0,aero,True,internal model quantity,,aerodynamic coefficient term computed inside the model (lift/drag/moment build-up)
+aero/coefficient/CDi,aero,True,internal model quantity,,aerodynamic coefficient term computed inside the model (lift/drag/moment build-up)
+aero/coefficient/CDmach,aero,False,constant in flight,,aerodynamic coefficient term computed inside the model (lift/drag/moment build-up)
+aero/coefficient/CDflap,aero,False,constant in flight,,aerodynamic coefficient term computed inside the model (lift/drag/moment build-up)
+aero/coefficient/CDgear,aero,True,internal model quantity,,aerodynamic coefficient term computed inside the model (lift/drag/moment build-up)
+aero/coefficient/CDsb,aero,False,constant in flight,,aerodynamic coefficient term computed inside the model (lift/drag/moment build-up)
+aero/coefficient/CDbeta,aero,True,internal model quantity,,aerodynamic coefficient term computed inside the model (lift/drag/moment build-up)
+aero/coefficient/CDde,aero,True,internal model quantity,,aerodynamic coefficient term computed inside the model (lift/drag/moment build-up)
+aero/coefficient/CYb,aero,True,internal model quantity,,aerodynamic coefficient term computed inside the model (lift/drag/moment build-up)
+aero/coefficient/CLalpha,aero,True,internal model quantity,,aerodynamic coefficient term computed inside the model (lift/drag/moment build-up)
+aero/coefficient/dCLflap,aero,False,constant in flight,,aerodynamic coefficient term computed inside the model (lift/drag/moment build-up)
+aero/coefficient/dCLsb,aero,False,constant in flight,,aerodynamic coefficient term computed inside the model (lift/drag/moment build-up)
+aero/coefficient/CLde,aero,True,internal model quantity,,aerodynamic coefficient term computed inside the model (lift/drag/moment build-up)
+aero/coefficient/Clb,aero,True,internal model quantity,,aerodynamic coefficient term computed inside the model (lift/drag/moment build-up)
+aero/coefficient/Clp,aero,True,internal model quantity,,aerodynamic coefficient term computed inside the model (lift/drag/moment build-up)
+aero/coefficient/Clr,aero,True,internal model quantity,,aerodynamic coefficient term computed inside the model (lift/drag/moment build-up)
+aero/coefficient/Clda,aero,True,internal model quantity,,aerodynamic coefficient term computed inside the model (lift/drag/moment build-up)
+aero/coefficient/Cldr,aero,True,internal model quantity,,aerodynamic coefficient term computed inside the model (lift/drag/moment build-up)
+aero/coefficient/Cmalpha,aero,True,internal model quantity,,aerodynamic coefficient term computed inside the model (lift/drag/moment build-up)
+aero/coefficient/Cmde,aero,True,internal model quantity,,aerodynamic coefficient term computed inside the model (lift/drag/moment build-up)
+aero/coefficient/Cmq,aero,True,internal model quantity,,aerodynamic coefficient term computed inside the model (lift/drag/moment build-up)
+aero/coefficient/Cmadot,aero,True,internal model quantity,,aerodynamic coefficient term computed inside the model (lift/drag/moment build-up)
+aero/coefficient/Cnb,aero,True,internal model quantity,,aerodynamic coefficient term computed inside the model (lift/drag/moment build-up)
+aero/coefficient/Cnr,aero,True,internal model quantity,,aerodynamic coefficient term computed inside the model (lift/drag/moment build-up)
+aero/coefficient/Cndr,aero,True,internal model quantity,,aerodynamic coefficient term computed inside the model (lift/drag/moment build-up)
+aero/coefficient/Cnda,aero,False,constant in flight,,aerodynamic coefficient term computed inside the model (lift/drag/moment build-up)
+flight-path/gamma-rad,flight-path,True,"duplicate (same quantity, other unit/form)",,flight-path angle in radians
+flight-path/gamma-deg,flight-path,True,"CANDIDATE: real FDR parameter, could be added",,flight-path angle (deg)
+flight-path/psi-gt-rad,flight-path,True,"CANDIDATE: real FDR parameter, could be added",,ground track (rad) -- an FDR records track angle
+moments/l-aero-lbsft,moments,True,internal model quantity,,aerodynamic / propulsive moment components (lb.ft)
+moments/m-aero-lbsft,moments,True,internal model quantity,,aerodynamic / propulsive moment components (lb.ft)
+moments/n-aero-lbsft,moments,True,internal model quantity,,aerodynamic / propulsive moment components (lb.ft)
+moments/roll-stab-aero-lbsft,moments,True,internal model quantity,,aerodynamic / propulsive moment components (lb.ft)
+moments/pitch-stab-aero-lbsft,moments,True,internal model quantity,,aerodynamic / propulsive moment components (lb.ft)
+moments/yaw-stab-aero-lbsft,moments,True,internal model quantity,,aerodynamic / propulsive moment components (lb.ft)
+moments/roll-wind-aero-lbsft,moments,True,internal model quantity,,aerodynamic / propulsive moment components (lb.ft)
+moments/pitch-wind-aero-lbsft,moments,True,internal model quantity,,aerodynamic / propulsive moment components (lb.ft)
+moments/yaw-wind-aero-lbsft,moments,True,internal model quantity,,aerodynamic / propulsive moment components (lb.ft)
+moments/l-total-lbsft,moments,True,internal model quantity,,aerodynamic / propulsive moment components (lb.ft)
+moments/m-total-lbsft,moments,True,internal model quantity,,aerodynamic / propulsive moment components (lb.ft)
+moments/n-total-lbsft,moments,True,internal model quantity,,aerodynamic / propulsive moment components (lb.ft)
+moments/l-gear-lbsft,moments,False,constant in flight,,aerodynamic / propulsive moment components (lb.ft)
+moments/m-gear-lbsft,moments,False,constant in flight,,aerodynamic / propulsive moment components (lb.ft)
+moments/n-gear-lbsft,moments,False,constant in flight,,aerodynamic / propulsive moment components (lb.ft)
+moments/l-prop-lbsft,moments,False,constant in flight,,aerodynamic / propulsive moment components (lb.ft)
+moments/m-prop-lbsft,moments,True,internal model quantity,,aerodynamic / propulsive moment components (lb.ft)
+moments/n-prop-lbsft,moments,False,constant in flight,,aerodynamic / propulsive moment components (lb.ft)
+systems/stall-warn-norm,systems,False,constant in flight,,
+ground/solid,ground,False,constant in flight,,
+ground/bumpiness,ground,False,constant in flight,,
+ground/maximum-force-lbs,ground,False,constant in flight,,
+ground/rolling_friction-factor,ground,False,constant in flight,,
+ground/static-friction-factor,ground,False,constant in flight,,
+ic/vc-kts,ic,False,constant in flight,,
+ic/ve-kts,ic,False,constant in flight,,
+ic/vg-kts,ic,False,constant in flight,,
+ic/vt-kts,ic,False,constant in flight,,
+ic/mach,ic,False,constant in flight,,
+ic/roc-fpm,ic,False,constant in flight,,
+ic/gamma-deg,ic,False,constant in flight,,
+ic/alpha-deg,ic,False,constant in flight,,
+ic/beta-deg,ic,False,constant in flight,,
+ic/theta-deg,ic,False,constant in flight,,
+ic/phi-deg,ic,False,constant in flight,,
+ic/psi-true-deg,ic,False,constant in flight,,
+ic/lat-gc-deg,ic,False,constant in flight,,
+ic/long-gc-deg,ic,False,constant in flight,,
+ic/h-sl-ft,ic,False,constant in flight,,
+ic/h-agl-ft,ic,False,constant in flight,,
+ic/terrain-elevation-ft,ic,False,constant in flight,,
+ic/vg-fps,ic,False,constant in flight,,
+ic/vt-fps,ic,False,constant in flight,,
+ic/vw-bx-fps,ic,False,constant in flight,,
+ic/vw-by-fps,ic,False,constant in flight,,
+ic/vw-bz-fps,ic,False,constant in flight,,
+ic/vw-north-fps,ic,False,constant in flight,,
+ic/vw-east-fps,ic,False,constant in flight,,
+ic/vw-down-fps,ic,False,constant in flight,,
+ic/vw-mag-fps,ic,False,constant in flight,,
+ic/vw-dir-deg,ic,False,constant in flight,,
+ic/roc-fps,ic,False,constant in flight,,
+ic/u-fps,ic,False,constant in flight,,
+ic/v-fps,ic,False,constant in flight,,
+ic/w-fps,ic,False,constant in flight,,
+ic/vn-fps,ic,False,constant in flight,,
+ic/ve-fps,ic,False,constant in flight,,
+ic/vd-fps,ic,False,constant in flight,,
+ic/gamma-rad,ic,False,constant in flight,,
+ic/alpha-rad,ic,False,constant in flight,,
+ic/theta-rad,ic,False,constant in flight,,
+ic/beta-rad,ic,False,constant in flight,,
+ic/phi-rad,ic,False,constant in flight,,
+ic/psi-true-rad,ic,False,constant in flight,,
+ic/lat-gc-rad,ic,False,constant in flight,,
+ic/long-gc-rad,ic,False,constant in flight,,
+ic/p-rad_sec,ic,False,constant in flight,,
+ic/q-rad_sec,ic,False,constant in flight,,
+ic/r-rad_sec,ic,False,constant in flight,,
+ic/lat-geod-rad,ic,False,constant in flight,,
+ic/lat-geod-deg,ic,False,constant in flight,,
+ic/geod-alt-ft,ic,False,constant in flight,,
+ic/targetNlf,ic,False,constant in flight,,
