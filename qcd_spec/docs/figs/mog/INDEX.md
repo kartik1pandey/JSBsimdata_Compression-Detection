@@ -8,17 +8,47 @@ encoder tf (linear out) → k = 128 → q0/q1 tf (4-comp. MoG head), decoder con
 ![losses](cae_etf_qtf_k128_lam0_s0_hmog4r8_olin_losses.png)
 ![iters](cae_etf_qtf_k128_lam0_s0_hmog4r8_olin_iters.png)
 
+## cae_etf_qtf_k16_lam0.25_s0_hmog4r8_olin
+encoder tf (linear out) → k = 16 → q0/q1 tf (4-comp. MoG head), decoder conv, λ = 0.25, seed 0
+![training](cae_etf_qtf_k16_lam0.25_s0_hmog4r8_olin_training.png)
+![losses](cae_etf_qtf_k16_lam0.25_s0_hmog4r8_olin_losses.png)
+![iters](cae_etf_qtf_k16_lam0.25_s0_hmog4r8_olin_iters.png)
+
 ## cae_etf_qtf_k16_lam0_s0_hmog4r8_olin
 encoder tf (linear out) → k = 16 → q0/q1 tf (4-comp. MoG head), decoder conv, λ = 0, seed 0
 ![training](cae_etf_qtf_k16_lam0_s0_hmog4r8_olin_training.png)
 ![losses](cae_etf_qtf_k16_lam0_s0_hmog4r8_olin_losses.png)
 ![iters](cae_etf_qtf_k16_lam0_s0_hmog4r8_olin_iters.png)
 
+## cae_etf_qtf_k2_lam0.25_s0_hmog4r8_olin
+encoder tf (linear out) → k = 2 → q0/q1 tf (4-comp. MoG head), decoder conv, λ = 0.25, seed 0
+![training](cae_etf_qtf_k2_lam0.25_s0_hmog4r8_olin_training.png)
+![losses](cae_etf_qtf_k2_lam0.25_s0_hmog4r8_olin_losses.png)
+![iters](cae_etf_qtf_k2_lam0.25_s0_hmog4r8_olin_iters.png)
+
+## cae_etf_qtf_k2_lam0_s0_hmog4r8_olin
+encoder tf (linear out) → k = 2 → q0/q1 tf (4-comp. MoG head), decoder conv, λ = 0, seed 0
+![training](cae_etf_qtf_k2_lam0_s0_hmog4r8_olin_training.png)
+![losses](cae_etf_qtf_k2_lam0_s0_hmog4r8_olin_losses.png)
+![iters](cae_etf_qtf_k2_lam0_s0_hmog4r8_olin_iters.png)
+
 ## cae_etf_qtf_k32_lam0_s0_hmog4r8_olin
 encoder tf (linear out) → k = 32 → q0/q1 tf (4-comp. MoG head), decoder conv, λ = 0, seed 0
 ![training](cae_etf_qtf_k32_lam0_s0_hmog4r8_olin_training.png)
 ![losses](cae_etf_qtf_k32_lam0_s0_hmog4r8_olin_losses.png)
 ![iters](cae_etf_qtf_k32_lam0_s0_hmog4r8_olin_iters.png)
+
+## cae_etf_qtf_k4_lam0.25_s0_hmog4r8_olin
+encoder tf (linear out) → k = 4 → q0/q1 tf (4-comp. MoG head), decoder conv, λ = 0.25, seed 0
+![training](cae_etf_qtf_k4_lam0.25_s0_hmog4r8_olin_training.png)
+![losses](cae_etf_qtf_k4_lam0.25_s0_hmog4r8_olin_losses.png)
+![iters](cae_etf_qtf_k4_lam0.25_s0_hmog4r8_olin_iters.png)
+
+## cae_etf_qtf_k4_lam0_s0_hmog4r8_olin
+encoder tf (linear out) → k = 4 → q0/q1 tf (4-comp. MoG head), decoder conv, λ = 0, seed 0
+![training](cae_etf_qtf_k4_lam0_s0_hmog4r8_olin_training.png)
+![losses](cae_etf_qtf_k4_lam0_s0_hmog4r8_olin_losses.png)
+![iters](cae_etf_qtf_k4_lam0_s0_hmog4r8_olin_iters.png)
 
 ## cae_etf_qtf_k64_lam0.25_s0_hmog4r8_olin
 encoder tf (linear out) → k = 64 → q0/q1 tf (4-comp. MoG head), decoder conv, λ = 0.25, seed 0
@@ -44,11 +74,29 @@ encoder tf (linear out) → k = 8 → q0/q1 tf (4-comp. MoG head), decoder conv,
 ![losses](cae_etf_qtf_k8_lam0.1_s1_hmog4r8_olin_losses.png)
 ![iters](cae_etf_qtf_k8_lam0.1_s1_hmog4r8_olin_iters.png)
 
+## cae_etf_qtf_k8_lam0.1_s2_hmog4r8_olin
+encoder tf (linear out) → k = 8 → q0/q1 tf (4-comp. MoG head), decoder conv, λ = 0.1, seed 2
+![training](cae_etf_qtf_k8_lam0.1_s2_hmog4r8_olin_training.png)
+![losses](cae_etf_qtf_k8_lam0.1_s2_hmog4r8_olin_losses.png)
+![iters](cae_etf_qtf_k8_lam0.1_s2_hmog4r8_olin_iters.png)
+
 ## cae_etf_qtf_k8_lam0.25_s0_hmog4r8_olin
 encoder tf (linear out) → k = 8 → q0/q1 tf (4-comp. MoG head), decoder conv, λ = 0.25, seed 0
 ![training](cae_etf_qtf_k8_lam0.25_s0_hmog4r8_olin_training.png)
 ![losses](cae_etf_qtf_k8_lam0.25_s0_hmog4r8_olin_losses.png)
 ![iters](cae_etf_qtf_k8_lam0.25_s0_hmog4r8_olin_iters.png)
+
+## cae_etf_qtf_k8_lam0.25_s1_hmog4r8_olin
+encoder tf (linear out) → k = 8 → q0/q1 tf (4-comp. MoG head), decoder conv, λ = 0.25, seed 1
+![training](cae_etf_qtf_k8_lam0.25_s1_hmog4r8_olin_training.png)
+![losses](cae_etf_qtf_k8_lam0.25_s1_hmog4r8_olin_losses.png)
+![iters](cae_etf_qtf_k8_lam0.25_s1_hmog4r8_olin_iters.png)
+
+## cae_etf_qtf_k8_lam0.25_s2_hmog4r8
+encoder tf → k = 8 → q0/q1 tf (4-comp. MoG head), decoder conv, λ = 0.25, seed 2
+![training](cae_etf_qtf_k8_lam0.25_s2_hmog4r8_training.png)
+![losses](cae_etf_qtf_k8_lam0.25_s2_hmog4r8_losses.png)
+![iters](cae_etf_qtf_k8_lam0.25_s2_hmog4r8_iters.png)
 
 ## cae_etf_qtf_k8_lam0_s0_hmog4r8_olin
 encoder tf (linear out) → k = 8 → q0/q1 tf (4-comp. MoG head), decoder conv, λ = 0, seed 0
@@ -61,4 +109,10 @@ encoder tf (linear out) → k = 8 → q0/q1 tf (4-comp. MoG head), decoder conv,
 ![training](cae_etf_qtf_k8_lam0_s1_hmog4r8_olin_training.png)
 ![losses](cae_etf_qtf_k8_lam0_s1_hmog4r8_olin_losses.png)
 ![iters](cae_etf_qtf_k8_lam0_s1_hmog4r8_olin_iters.png)
+
+## cae_etf_qtf_k8_lam0_s2_hmog4r8_olin
+encoder tf (linear out) → k = 8 → q0/q1 tf (4-comp. MoG head), decoder conv, λ = 0, seed 2
+![training](cae_etf_qtf_k8_lam0_s2_hmog4r8_olin_training.png)
+![losses](cae_etf_qtf_k8_lam0_s2_hmog4r8_olin_losses.png)
+![iters](cae_etf_qtf_k8_lam0_s2_hmog4r8_olin_iters.png)
 
